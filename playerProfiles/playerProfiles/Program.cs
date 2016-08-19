@@ -62,15 +62,29 @@ namespace playerProfiles
 			}
 			{
 				Console.WriteLine("Here is the list of players in your team with their stats.\n \n");
-				Console.WriteLine("\tName\t\t\tAge\tHight\tWeight\tYears Played\tYears with{0}",teamName);
+				// making the rows and colloms
+				Console.Write("Num,".PadLeft(3));
+				Console.Write("Name,".PadLeft(25));
+				Console.Write("Age,".PadLeft(7));
+				Console.Write("Hight,".PadLeft(7));
+				Console.Write("Weight,".PadLeft(10));
+				Console.Write("Years Played,".PadLeft(20));
+				Console.WriteLine("Years with The {0}".PadLeft(25),teamName);
 				while(x<playerx)
 				{
-					Console.WriteLine($"{x,3}" + $"{playersName[x],30}" + $"{playersAge[x],10}" + $"{playersHightFeet[x],1}" + $"{playersHightInches[x],2}" + $"{playersSeasons[x],2}");
+					Console.WriteLine($"{x+1,3}" + 
+					                  $"{playersName[x],25}" + 
+					                  $"{playersAge[x],7}" + 
+					                  $"{playersHightFeet[x],4}" + 
+					                  $"{playersHightInches[x],3}" +
+					                  $"{playersWeight,10}" + 
+					                  $"{playersSeasons[x],20}" +
+					                  $"{playersSeasonTeam[x],25}");
 					x = x + 1;
 					                  
 				}
 
-				Console.WriteLine("End of List");
+				Console.WriteLine("\t\t\tAnd Coach {0} of The Team The {1}",coach,teamName);
 				
 				
 			}
