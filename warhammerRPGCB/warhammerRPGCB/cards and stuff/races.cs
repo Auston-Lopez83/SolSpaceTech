@@ -15,13 +15,10 @@ namespace warhammerRPGCB
 	public class races
 	{
 		string raceName;
-		int str;
-		int toug;
-		int agil;
-		int will;
-		int intel;
-		int fell;
-		int wound;
+		string raceSkillName;
+		string raceSkillText;
+		int woundThreshold;
+
 
 
 		public races()
