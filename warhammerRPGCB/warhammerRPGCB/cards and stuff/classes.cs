@@ -31,7 +31,7 @@ namespace warhammerRPGCB
 			agent.stanceRed = 2;
 			agent.stanceGreen = 2;
 			agent.primaryChar = "Intelligence, Felloship";
-			agent.talentSlots = new string[] {"FocusTalent","ReputationTalent"};
+			agent.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes agitator = new classes();
 			agitator.className = "Agitator";
@@ -39,13 +39,13 @@ namespace warhammerRPGCB
 			agitator.stanceRed = 2;
 			agitator.stanceGreen = 2;
 			agitator.primaryChar = "Intelligence, Fellowship";
-			agitator.talentSlots = new string[] {"ReputationTalent","ReputationTalent"};
+			agitator.talentSlots = new string[] {"reputationTalent","reputationTalent"};
 
 			classes apprenticeWizard = new classes();
 			apprenticeWizard.className = "Apprentice Wizard";
 			apprenticeWizard.carrerSkills = "Channeling, Discipline, Education, Intuition, Magical Sight, Observation, Spellcraft";
 			apprenticeWizard.primaryChar = "Intelligence, Willpower";
-			apprenticeWizard.talentSlots = new string[] {"FocusTalent","OrderTalent"};
+			apprenticeWizard.talentSlots = new string[] {"focusTalent","orderTalent"};
 
 			classes apothecary = new classes();
 			apothecary.className = "Apothecary";
@@ -53,7 +53,7 @@ namespace warhammerRPGCB
 			apothecary.stanceRed = 1;
 			apothecary.stanceGreen = 3;
 			apothecary.primaryChar = "Intelligence, Toughness";
-			apothecary.talentSlots = new string[] {"FocusTalent", "FocusTalent"};
+			apothecary.talentSlots = new string[] {"focusTalent", "focusTalent"};
 
 
 			classes barberSurgeon = new classes();
@@ -62,7 +62,7 @@ namespace warhammerRPGCB
 			barberSurgeon.stanceRed = 1;
 			barberSurgeon.stanceGreen = 3;
 			barberSurgeon.primaryChar = "Intelligence, Fellowship";
-			barberSurgeon.talentSlots = new string[] {"FocusTalent","ReputationTalent"};
+			barberSurgeon.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes boatman = new classes();
 			boatman.className = "Boatman";
@@ -70,7 +70,7 @@ namespace warhammerRPGCB
 			boatman.stanceRed = 3;
 			boatman.stanceGreen = 1;
 			boatman.primaryChar = "Strenght, Agility";
-			boatman.talentSlots= new string[] {"FocusTalent","TacticTalent"};
+			boatman.talentSlots= new string[] {"focusTalent","tacticTalent"};
 
 			classes burgher = new classes();
 			burgher.className = "Burgher";
@@ -78,7 +78,7 @@ namespace warhammerRPGCB
 			burgher.stanceRed = 1;
 			burgher.stanceGreen = 3;
 			burgher.primaryChar = "Intelligence, Fellowship";
-			burgher.talentSlots = new string[] {"ReputationTalent","ReputationTalent"};
+			burgher.talentSlots = new string[] {"reputationTalent","reputationTalent"};
 
 			classes charlatan = new classes();
 			charlatan.className = "Charlatan";
@@ -86,7 +86,7 @@ namespace warhammerRPGCB
 			charlatan.stanceRed = 2;
 			charlatan.stanceGreen = 2;
 			charlatan.primaryChar = "Willpower, Fellowship";
-			charlatan.talentSlots = new string[] {"ReputationTalent","ReputationTalent","FocusTalent"};
+			charlatan.talentSlots = new string[] {"reputationTalent","reputationTalent","focusTalent"};
 
 			classes coachman = new classes();
 			coachman.className = "Coachman";
@@ -94,7 +94,7 @@ namespace warhammerRPGCB
 			coachman.stanceRed = 2;
 			coachman.stanceGreen = 2;
 			coachman.primaryChar = "Toughness, Agility";
-			coachman.talentSlots = new string [] {"ReputationTalent","TacticTalent"};
+			coachman.talentSlots = new string [] {"reputationTalent","tacticTalent"};
 
 			classes commoner = new classes();
 			commoner.className = "Commoner";
@@ -102,7 +102,7 @@ namespace warhammerRPGCB
 			commoner.stanceRed = 1;
 			commoner.stanceGreen = 3;
 			commoner.primaryChar = "Toughness, Willpower";
-			commoner.talentSlots = new string[] {"FocusTalent","ReputationTalent"};
+			commoner.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes dilettante = new classes(); 
 			dilettante.className = "Dilettante";
@@ -110,13 +110,13 @@ namespace warhammerRPGCB
 			dilettante.stanceRed = 2;
 			dilettante.stanceGreen = 2;
 			dilettante.primaryChar = "Intelligence, Fellowship";
-			dilettante.talentSlots = new string[] {"FocusTalent","ReputtionTalent"};
+			dilettante.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes disciple = new classes();
 			disciple.className = "Disciple";
 			disciple.carrerSkills = "Charm, Education, First Aid, Intuition, Invocation, Piety";
 			disciple.primaryChar = "Willpower, Fellowship";
-			disciple.talentSlots = new string[] {"FaithTalent","FocusTalent"};
+			disciple.talentSlots = new string[] {"faithTalent","focusTalent"};
 
 			classes envoy = new classes(); 
 			envoy.className = "Envoy";
@@ -124,7 +124,7 @@ namespace warhammerRPGCB
 			envoy.stanceRed = 1;
 			envoy.stanceGreen = 3;
 			envoy.primaryChar = "Intelligence ,Fellowship";
-			envoy.talentSlots = new string[] {"ReputationTalent","Reputationtalent"};
+			envoy.talentSlots = new string[] {"reputationTalent","reputationTalent"};
 
 			classes flagellant = new classes();
 			flagellant.className = "Flagellant";
@@ -132,7 +132,7 @@ namespace warhammerRPGCB
 			flagellant.stanceRed = 3;
 			flagellant.stanceGreen = 1;
 			flagellant.primaryChar = "Strength, Toughness";
-			flagellant.talentSlots = new string[] {"FocusTalent","ReputationTalent","Insanity"};
+			flagellant.talentSlots = new string[] {"focusTalent","reputationTalent","insanity"};
 
 			classes forger = new classes();
 			forger.className = "Forger";
@@ -140,7 +140,7 @@ namespace warhammerRPGCB
 			forger.stanceRed = 2;
 			forger.stanceGreen = 2;
 			forger.primaryChar = "Agility, Intelligence";
-			forger.talentSlots = new string[] {"FocusTalent","FocusTalent"};
+			forger.talentSlots = new string[] {"focusTalent","focusTalent"};
 
 			classes graveRobber = new classes();
 			graveRobber.className = "Grave Rober";
@@ -148,7 +148,7 @@ namespace warhammerRPGCB
 			graveRobber.stanceRed = 2;
 			graveRobber.stanceGreen = 2;
 			graveRobber.primaryChar = "Toughness, Willpower";
-			graveRobber.talentSlots = new string[] {"FocusTalent","Reputation"};
+			graveRobber.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes gambler = new classes();
 			gambler.className = "Gambler";
@@ -156,7 +156,7 @@ namespace warhammerRPGCB
 			gambler.stanceRed = 3;
 			gambler.stanceGreen = 1;
 			gambler.primaryChar = "Agility, Felowship";
-			gambler.talentSlots = new string[] {"FocusTalent","ReputationTalent"};
+			gambler.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes giantSlayer = new classes();
 			giantSlayer.className = "Giant Slayer";
@@ -164,7 +164,7 @@ namespace warhammerRPGCB
 			giantSlayer.stanceRed = 3;
 			giantSlayer.stanceGreen = 1;
 			giantSlayer.primaryChar = "Strength, Toughness";
-			giantSlayer.talentSlots = new string[] {"TacticTalent","TacticTalent"};
+			giantSlayer.talentSlots = new string[] {"tacticTalent","tacticTalent"};
 
 			classes hunter = new classes();
 			hunter.className = "Hunter";
@@ -172,13 +172,13 @@ namespace warhammerRPGCB
 			hunter.stanceRed = 2;
 			hunter.stanceGreen = 2;
 			hunter.primaryChar = "Toughness, Agility";
-			hunter.talentSlots = new string[] {"FocusTalent","TacticTalent"};
+			hunter.talentSlots = new string[] {"focusTalent","tacticTalent"};
 
 			classes initiate = new classes();
 			initiate.className = "Initiate";
 			initiate.carrerSkills = "Charm, Education, First Aid, Intuition, Piety";
 			initiate.primaryChar = "Willpower, Fellowship";
-			initiate.talentSlots = new string[] {"FaithTalent","FocusTalent"};
+			initiate.talentSlots = new string[] {"faithTalent","focusTalent"};
 
 			classes merchant = new classes();
 			merchant.className = "Mearchant";
@@ -186,7 +186,7 @@ namespace warhammerRPGCB
 			merchant.stanceRed = 2;
 			merchant.stanceGreen = 2;
 			merchant.primaryChar = "Intelligence, Fellowship";
-			merchant.talentSlots = new string[] {"ReputationTalent","ReputationTalent","ReputationTalent"};
+			merchant.talentSlots = new string[] {"reputationTalent","reputationTalent","reputationTalent"};
 
 			classes mercenary = new classes();
 			mercenary.className = "Mercenary";
@@ -194,7 +194,7 @@ namespace warhammerRPGCB
 			mercenary.stanceRed = 2;
 			mercenary.stanceGreen =2;
 			mercenary.primaryChar = "Strength, Willpower";
-			mercenary.talentSlots = new string[] {"FocusTalent","TacticTalent"};
+			mercenary.talentSlots = new string[] {"focusTalent","tacticTalent"};
 
 			classes messenger = new classes();
 			messenger.className = "Messenger";
@@ -202,7 +202,7 @@ namespace warhammerRPGCB
 			messenger.stanceRed = 1;
 			messenger.stanceGreen = 3;
 			messenger.primaryChar = "Agility, Fellowship";
-			messenger.talentSlots = new string[] {"FocusTalent","ReputationTalent"};
+			messenger.talentSlots = new string[] {"focusTalent","reputationTalent"};
 
 			classes navigator = new classes();
 			navigator.className = "Navigator";
@@ -210,7 +210,7 @@ namespace warhammerRPGCB
 			navigator.stanceRed = 2;
 			navigator.stanceGreen = 2;
 			navigator.primaryChar = "Toughness, Intelligence";
-			navigator.talentSlots = new string[] {"FocusTalent","FocusTalent"};
+			navigator.talentSlots = new string[] {"focusTalent","focusTalent"};
 
 			classes physician = new classes();
 			physician.className = "Physician";
@@ -218,7 +218,7 @@ namespace warhammerRPGCB
 			physician.stanceRed = 1;
 			physician.stanceGreen = 3;
 			physician.primaryChar = "Intelligence, Willpower";
-			physician.talentSlots = new string[] {"FocusTalent","FocusTalent","Focustalent"};
+			physician.talentSlots = new string[] {"focusTalent","focusTalent","focusTalent"};
 
 			classes roadwarden = new classes();
 			roadwarden.className = "Roadwarden";
@@ -226,7 +226,7 @@ namespace warhammerRPGCB
 			roadwarden.stanceRed = 2;
 			roadwarden.stanceGreen =2;
 			roadwarden.primaryChar = "Toughness, Intelligence";
-			roadwarden.talentSlots = new string[] {"ReputationTalent","TacticTalent"};
+			roadwarden.talentSlots = new string[] {"reputationTalent","tacticTalent"};
 
 			classes scout = new classes();
 			scout.className = "Scout";
@@ -234,7 +234,7 @@ namespace warhammerRPGCB
 			scout.stanceRed = 1;
 			scout.stanceGreen = 3;
 			scout.primaryChar = "Agility, Intelligence";
-			scout.talentSlots = new string [] {"FocusTalent","TacticTalent"};
+			scout.talentSlots = new string [] {"focusTalent","tacticTalent"};
 
 			classes scholar = new classes();
 			scholar.className = "SCholar";
@@ -242,7 +242,7 @@ namespace warhammerRPGCB
 			scholar.stanceRed =1;
 			scholar.stanceGreen =3;
 			scholar.primaryChar = "Intelligence, Willpower";
-			scholar.talentSlots = new string[] {"FocusTalent","FocusTalent","ReputationTalent"};
+			scholar.talentSlots = new string[] {"focusTalent","focusTalent","reputationTalent"};
 
 			classes servant = new classes();
 			servant.className = "Servant";
@@ -250,7 +250,7 @@ namespace warhammerRPGCB
 			servant.stanceRed = 2;
 			servant.stanceGreen = 2;
 			servant.primaryChar = "Toughness, Willpower";
-			servant.talentSlots = new string [] {"FocusTalent","ReputationTalent"};
+			servant.talentSlots = new string [] {"focusTalent","reputationTalent"};
 
 			classes soldier = new classes();
 			soldier.className = "Soldier";
@@ -258,7 +258,7 @@ namespace warhammerRPGCB
 			soldier.stanceRed =2;
 			soldier.stanceGreen = 2;
 			soldier.primaryChar = "Toughness, Willpower";
-			soldier.talentSlots = new string[] {"ReputationTalent","TacticTalent"};
+			soldier.talentSlots = new string[] {"reputationTalent","tacticTalent"};
 
 			classes student = new classes();
 			student.className = "Student";
@@ -266,7 +266,7 @@ namespace warhammerRPGCB
 			student.stanceRed = 1;
 			student.stanceGreen = 3;
 			student.primaryChar = "Intelligence, Felowship";
-			student.talentSlots = new string[] {"FocusTalent","FocusTalent"};
+			student.talentSlots = new string[] {"focusTalent","focusTalent"};
 
 			classes theif = new classes();
 			theif.className = "Theif";
@@ -274,14 +274,14 @@ namespace warhammerRPGCB
 			theif.stanceRed = 3;
 			theif.stanceGreen = 1;
 			theif.primaryChar = "Agility, Fellowship";
-			theif.talentSlots = new string [] {"FocusTalent","ReputationTalent"};
+			theif.talentSlots = new string [] {"focusTalent","reputationTalent"};
 			classes thug = new classes();
 			thug.className = "Thug";
 			thug.carrerSkills = "Athletics, Guile, Intimidation, Skullduggery, Weapon Skill";
 			thug.stanceRed = 3;
 			thug.stanceGreen = 1;
 			thug.primaryChar = "Strength, Agility";
-			thug.talentSlots = new string[] {"TacticTalent","TacticTalent"};
+			thug.talentSlots = new string[] {"tacticTalent","tacticTalent"};
 
 			classes trollSlayer = new classes();
 			trollSlayer.className = "Troll Slayer";
@@ -289,7 +289,7 @@ namespace warhammerRPGCB
 			trollSlayer.stanceRed = 3;
 			trollSlayer.stanceGreen = 1;
 			trollSlayer.primaryChar = "Strength, Toughness";
-			trollSlayer.talentSlots = new string [] {"TacticTalent","TacticTalent"};
+			trollSlayer.talentSlots = new string [] {"tacticTalent","tacticTalent"};
 
 			classes warlock = new classes();
 			warlock.className = "Warlock";
@@ -297,7 +297,7 @@ namespace warhammerRPGCB
 			warlock.stanceRed = 3;
 			warlock.stanceGreen =1;
 			warlock.primaryChar = "Toughness, Willpower";
-			warlock.talentSlots = new string [] {"FocusTalent","WitchcraftTalent","WitchcraftTalent"};
+			warlock.talentSlots = new string [] {"focusTalent","WitchcraftTalent","WitchcraftTalent"};
 
 			classes witch = new classes();
 			witch.className = "Witch";
@@ -305,13 +305,13 @@ namespace warhammerRPGCB
 			witch.stanceRed = 2;
 			witch.stanceGreen = 2;
 			witch.primaryChar = "Fellowship, Willpower";
-			witch.talentSlots = new string[] {"WitchcraftTalent","FocusTalent"};
+			witch.talentSlots = new string[] {"WitchcraftTalent","focusTalent"};
 
 			classes wizard = new classes();
 			wizard.className = "Wizard";
 			wizard.carrerSkills = "Channelling, Discipline, Education, Intuition, Magical Sight, Observaion, Spellcraft";
 			wizard.primaryChar = "Intelligence, Willpower";
-			wizard.talentSlots = new string[] {"FocusTlanet","FocusTalent","OrderTalent"};
+			wizard.talentSlots = new string[] {"focusTalnet","focusTalent","orderTalent"};
 
 			classes waywatcher= new classes();
 			waywatcher.className = "Waywatcher";
@@ -319,7 +319,7 @@ namespace warhammerRPGCB
 			waywatcher.stanceRed = 2;
 			waywatcher.stanceGreen = 2;
 			waywatcher.primaryChar = "agility, Willpower";
-			waywatcher.talentSlots = new string[] {"FocusTalent","TacticTalent"}
+			waywatcher.talentSlots = new string[] {"focusTalent","tacticTalent"}
 ;
 			classes witchHunter = new classes();
 			witchHunter.className = "Witch Hunter";
@@ -327,7 +327,7 @@ namespace warhammerRPGCB
 			witchHunter.stanceRed = 3;
 			witchHunter.stanceGreen = 1;
 			witchHunter.primaryChar = "Agility, Intelligence";
-			witchHunter.talentSlots = new string[] {"ReputtionTalent","TacticTalent"};
+			witchHunter.talentSlots = new string[] {"reputationTalent","tacticTalent"};
 
 			classes watchman = new classes();
 			watchman.className = "Watchman";
@@ -335,7 +335,7 @@ namespace warhammerRPGCB
 			watchman.stanceRed = 2;
 			watchman.stanceGreen = 2;
 			watchman.primaryChar = "Toughness. Fellowship";
-			watchman.talentSlots = new string[] {"ReputationTalent","TacticTalent"};
+			watchman.talentSlots = new string[] {"reputationTalent","tacticTalent"};
 
 			classes zealot = new classes();
 			zealot.className = "Zealot";
@@ -343,7 +343,7 @@ namespace warhammerRPGCB
 			zealot.stanceRed = 3;
 			zealot.stanceGreen = 1;
 			zealot.primaryChar = "Toughnes, Willpower";
-			zealot.talentSlots = new string[] {"FocusTalent","Insanity"};
+			zealot.talentSlots = new string[] {"focusTalent","insanity"};
 
 
 		}

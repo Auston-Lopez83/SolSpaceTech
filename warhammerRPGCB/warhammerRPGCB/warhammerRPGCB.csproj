@@ -88,6 +88,9 @@
     <Compile Include="cards and stuff\classes.cs" />
     <Compile Include="cards and stuff\gear.cs" />
     <Compile Include="cards and stuff\tacticTalent.cs" />
+    <Compile Include="cards and stuff\witchcraftTalent.cs" />
+    <Compile Include="cards and stuff\orderTalent.cs" />
+    <Compile Include="cards and stuff\faithTalent.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
