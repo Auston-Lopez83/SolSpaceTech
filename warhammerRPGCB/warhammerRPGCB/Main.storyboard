@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A304a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -670,27 +671,908 @@
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1200" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="115" y="124" width="250" height="22"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Your document contents here" id="Cc7-nU-5Mv">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-ii-EsA" userLabel="Race Menu">
+                                <rect key="frame" x="24" y="505" width="159" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="idw-mS-wSb">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="gku-bC-TJn">
+                                        <items>
+                                            <menuItem title="Human" id="Iu6-zW-JNo"/>
+                                            <menuItem title="Dwarf" id="IbZ-m0-o7f"/>
+                                            <menuItem title="High Elf" id="twH-Js-bxs"/>
+                                            <menuItem title="Wood Elf" id="Ogu-rV-hUj"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSd-y4-ZDl">
+                                <rect key="frame" x="86" y="552" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Race" id="5iy-sg-S4b">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bk-ih-eG6">
+                                <rect key="frame" x="308" y="553" width="45" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Career" id="ZoK-Vm-4Yc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PbE-Ss-bQQ">
+                                <rect key="frame" x="264" y="506" width="133" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="YkN-ZV-D3c">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="lOY-Pp-s3T">
+                                        <items>
+                                            <menuItem title="Acolyte" id="9OC-MK-Sik"/>
+                                            <menuItem title="Apothrcary" id="Ybv-dR-Fp7"/>
+                                            <menuItem title="Agent" id="EG8-Sv-oIO"/>
+                                            <menuItem title="Agitator" id="Iu9-ho-ZSf"/>
+                                            <menuItem title="Apprentice Wizard" id="Q7f-Or-flB"/>
+                                            <menuItem title="Barber-Surgeon" id="BDR-sR-bbf"/>
+                                            <menuItem title="Boatman" id="AX4-pF-5jk"/>
+                                            <menuItem title="Burgher" id="h9k-3H-AkI"/>
+                                            <menuItem title="Charlatn" id="stB-Ah-frQ"/>
+                                            <menuItem title="Coachman" id="Mlc-ux-Z4y"/>
+                                            <menuItem title="Commoner" id="jSP-3B-b3E"/>
+                                            <menuItem title="Delettant" id="5m6-jr-b3G"/>
+                                            <menuItem title="Disciple" id="g1M-Jf-562"/>
+                                            <menuItem title="Envoy" id="hkT-Nx-YmJ"/>
+                                            <menuItem title="Flagellant" id="avA-ps-BRg"/>
+                                            <menuItem title="Forger" id="rAW-d1-9GX"/>
+                                            <menuItem title="Gambler" id="rwO-sf-eJT"/>
+                                            <menuItem title="Giant Slayer" id="1RQ-SZ-j8I"/>
+                                            <menuItem title="Grave Robber" state="on" id="x2X-mR-hD8"/>
+                                            <menuItem title="Hunter" id="dCl-v2-abN"/>
+                                            <menuItem title="Initiate" id="tiI-a3-oEU"/>
+                                            <menuItem title="Mercenary" id="WQ8-5e-BnJ"/>
+                                            <menuItem title="Merchant" id="vU3-i8-WKc"/>
+                                            <menuItem title="Messenger" id="tpQ-Fx-APr"/>
+                                            <menuItem title="Navigator" id="v22-GP-XLv"/>
+                                            <menuItem title="Physician" id="dK9-jF-iUl"/>
+                                            <menuItem title="Roadwarden" id="CbU-Fs-JVf"/>
+                                            <menuItem title="Scholar" id="piV-LY-8wJ"/>
+                                            <menuItem title="Scout" id="pha-ei-CKU"/>
+                                            <menuItem title="Servant" id="R7O-hc-ZPH"/>
+                                            <menuItem title="Soldier" id="Jdh-nK-Qe1"/>
+                                            <menuItem title="Student" id="QD8-L2-bwY"/>
+                                            <menuItem title="Thief" id="CeH-zK-ssH"/>
+                                            <menuItem title="Thug" id="JpL-k9-f7F"/>
+                                            <menuItem title="Troll Slayer" id="vxB-eu-Q7T"/>
+                                            <menuItem title="Watchman" id="1YA-7J-xbL"/>
+                                            <menuItem title="Waywatcher" id="SRI-mk-FZ1"/>
+                                            <menuItem title="WitchHunter" id="xTQ-SY-gp8"/>
+                                            <menuItem title="Warlock" id="tef-am-4Lu"/>
+                                            <menuItem title="Witch" id="CPv-NC-gJC"/>
+                                            <menuItem title="Wizard" id="fHE-g0-kdS"/>
+                                            <menuItem title="Zealot" id="Pjp-Q3-ddS"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWf-49-wVe">
+                                <rect key="frame" x="58" y="420" width="90" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Strength" id="MdM-xz-th2">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-xq-Cac">
+                                <rect key="frame" x="52" y="351" width="103" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Toughness" id="Dda-WX-ftm">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-0A-ttm">
+                                <rect key="frame" x="73" y="282" width="60" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Agility" id="bqt-tP-CN1">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-6q-ujt">
+                                <rect key="frame" x="42" y="199" width="123" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Intelligence" id="En4-oK-2tW">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0z-jg-Gdi">
+                                <rect key="frame" x="55" y="117" width="97" height="32"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Willpower" id="XT0-bL-amr">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-V6-raK">
+                                <rect key="frame" x="42" y="33" width="123" height="24"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fellowship" id="ZHo-uf-Wuj">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3M-pL-xCM">
+                                <rect key="frame" x="301" y="444" width="57" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Athletics" id="xaY-5K-9aU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-mV-MLB">
+                                <rect key="frame" x="290" y="419" width="84" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ballistic Skill" id="uEq-Ug-zOM">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-Sk-lte">
+                                <rect key="frame" x="54" y="470" width="100" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Characteristics" id="D1m-PO-GTg">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4J-y0-H99">
+                                <rect key="frame" x="281" y="469" width="100" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Skill" id="qBx-i2-TzR">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rS8-Tk-RW6">
+                                <rect key="frame" x="416" y="470" width="100" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Char" id="teP-ue-3vn">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTx-Td-ESh">
+                                <rect key="frame" x="288" y="394" width="82" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Coordination" id="YV9-bh-DIq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1D-c3-Uu8">
+                                <rect key="frame" x="294" y="345" width="70" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Resilience" id="duo-Of-HgU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-st-DEY">
+                                <rect key="frame" x="312" y="320" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ride" id="v0b-az-WJN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="3kt-He-QEz">
+                                <rect key="frame" x="34" y="236" width="600" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-GP-o2z">
+                                <rect key="frame" x="297" y="370" width="64" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Intimidate" id="yd8-Z3-Cr9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-C5-q6B">
+                                <rect key="frame" x="287" y="296" width="85" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Skulduggery" id="lPk-cm-ROO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJS-zQ-ICe">
+                                <rect key="frame" x="304" y="271" width="51" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Stealth" id="uMg-nF-1Oz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-fD-Zif">
+                                <rect key="frame" x="286" y="246" width="86" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Weapon Skill" id="Ph4-TS-N9N">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFs-DE-nzV">
+                                <rect key="frame" x="437" y="445" width="57" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="St" id="1xu-er-wrt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5t-GG-tv0">
+                                <rect key="frame" x="453" y="422" width="25" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ag" id="daq-qb-Ee2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-mk-Tt8">
+                                <rect key="frame" x="443" y="395" width="46" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ag" id="b02-3H-HHj">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfD-wY-ZSN">
+                                <rect key="frame" x="454" y="346" width="23" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="To" id="cjg-Gy-1x8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWI-tA-BH5">
+                                <rect key="frame" x="453" y="321" width="25" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ag" id="A9E-jf-s3V">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-Z9-Lhd">
+                                <rect key="frame" x="448" y="371" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="St" id="PCT-Qk-NbA">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-Pe-UvG">
+                                <rect key="frame" x="453" y="297" width="25" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ag" id="2iB-KC-Lae">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bks-o4-qLB">
+                                <rect key="frame" x="453" y="272" width="25" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ag" id="FWt-hF-085">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-zv-QqB">
+                                <rect key="frame" x="454" y="247" width="23" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="To" id="nof-1g-TbM">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-Vd-PQ5">
+                                <rect key="frame" x="437" y="212" width="57" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fel" id="E1t-Tt-7s7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18W-Hc-Vua">
+                                <rect key="frame" x="452" y="188" width="28" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Wp" id="mB7-MN-cGJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fga-lA-q5C">
+                                <rect key="frame" x="454" y="14" width="24" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Int" id="zOn-TS-8H4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebS-g5-NaF">
+                                <rect key="frame" x="450" y="163" width="33" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Int" id="SiC-4u-Ok6">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9N-sJ-7LA">
+                                <rect key="frame" x="453" y="113" width="26" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fel" id="k8d-wE-NDE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psd-uG-z5A">
+                                <rect key="frame" x="454" y="88" width="24" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Int" id="syJ-Se-dtb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydi-jE-ckn">
+                                <rect key="frame" x="448" y="139" width="34" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Int" id="Noz-mE-0f9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k91-Nj-Dp9">
+                                <rect key="frame" x="453" y="64" width="26" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fel" id="AjG-pd-Prp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-7h-LYe">
+                                <rect key="frame" x="454" y="39" width="24" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Int" id="Sut-me-aVN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9Z-Wn-gW3">
+                                <rect key="frame" x="302" y="213" width="57" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Charm" id="huI-Rf-Byy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-c0-XI6">
+                                <rect key="frame" x="290" y="188" width="80" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Discipline" id="etL-YO-2Ln">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tD4-z1-uy5">
+                                <rect key="frame" x="289" y="163" width="82" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="First Ade" id="6wS-C5-m16">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIU-5b-4vX">
+                                <rect key="frame" x="311" y="114" width="39" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Guile" id="dKT-0x-uFt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fi-aq-OBA">
+                                <rect key="frame" x="302" y="89" width="58" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Intuition" id="jsl-1b-NBt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-XA-0ak">
+                                <rect key="frame" x="298" y="139" width="64" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Folklore" id="jqV-zd-u13">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyK-gS-MDs">
+                                <rect key="frame" x="293" y="65" width="75" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Leadership" id="kju-oy-aKa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzo-3A-lMq">
+                                <rect key="frame" x="291" y="40" width="80" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Nature Lore" id="bLa-IG-bPK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWO-X0-eqT">
+                                <rect key="frame" x="289" y="15" width="82" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Observation" id="uoF-go-2vt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shD-YG-MYU">
+                                <rect key="frame" x="512" y="470" width="100" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Trained" id="vQp-Nk-Efv">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="J12-Yz-dQ9">
+                                <rect key="frame" x="631" y="12" width="5" height="475"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rD-v7-Xi9">
+                                <rect key="frame" x="520" y="444" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="JcW-4s-d6N"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-fa-Xxn">
+                                <rect key="frame" x="499" y="439" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="GuR-hE-4uv"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="0rD-v7-Xi9" id="l87-eH-CTe"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBD-2L-YVy">
+                                <rect key="frame" x="520" y="419" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="9Ou-d2-cmn"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-cV-a3p">
+                                <rect key="frame" x="499" y="414" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="iv9-Nc-g2c"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="mBD-2L-YVy" id="Hue-b7-73c"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-jb-2hE">
+                                <rect key="frame" x="520" y="393" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="LKK-Nj-Ios"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-VC-imO">
+                                <rect key="frame" x="499" y="388" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="6iZ-sz-DJ0"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="SWW-jb-2hE" id="kAY-wc-WrG"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W46-zS-RVq">
+                                <rect key="frame" x="520" y="370" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="wxr-Z7-RvN"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xv4-Ij-OcH">
+                                <rect key="frame" x="499" y="365" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="Ret-RX-HEx"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="W46-zS-RVq" id="qhu-dh-maC"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpD-R0-jFm">
+                                <rect key="frame" x="520" y="345" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="JSk-O3-hjU"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcQ-nW-UfW">
+                                <rect key="frame" x="499" y="340" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="OTg-B2-hMi"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="fpD-R0-jFm" id="RPH-R5-fDL"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpV-ph-4UK">
+                                <rect key="frame" x="520" y="319" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Ifk-av-hkH"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGl-la-eIG">
+                                <rect key="frame" x="499" y="314" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="mYT-HR-l80"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="qpV-ph-4UK" id="GFs-ef-M4H"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-uC-okM">
+                                <rect key="frame" x="520" y="296" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Wpp-jq-NPn"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-hK-80R">
+                                <rect key="frame" x="499" y="291" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="OFG-Z2-bVm"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="Byk-uC-okM" id="oR4-Yj-XNe"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9f-AP-hiU">
+                                <rect key="frame" x="520" y="271" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="hnB-aR-XhJ"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-FM-bxU">
+                                <rect key="frame" x="499" y="266" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="sOA-Ut-Sbg"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="U9f-AP-hiU" id="k1L-xu-fAt"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAi-jK-C5Y">
+                                <rect key="frame" x="520" y="245" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="15o-If-LDs"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="puV-Is-eMF">
+                                <rect key="frame" x="499" y="240" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="0jA-DB-2qT"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="AAi-jK-C5Y" id="zjh-lp-ZK6"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-er-XIS">
+                                <rect key="frame" x="520" y="210" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="574-sK-ZcG"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-na-SOt">
+                                <rect key="frame" x="499" y="205" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="nhk-2E-NWO"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="cYy-er-XIS" id="TGx-2q-0su"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7G5-Nx-N4X">
+                                <rect key="frame" x="520" y="185" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="xsp-Ee-Grn"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-st-7as">
+                                <rect key="frame" x="499" y="180" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="mHk-bW-GcX"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="7G5-Nx-N4X" id="j1g-wp-GYc"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-8Q-u0q">
+                                <rect key="frame" x="520" y="159" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="sRo-i0-Fsa"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8X1-CV-PXa">
+                                <rect key="frame" x="499" y="154" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="FTw-kA-bGi"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="dUL-8Q-u0q" id="PYt-D8-WVs"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-Yw-XD2">
+                                <rect key="frame" x="520" y="136" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="1hN-3R-vcE"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-Wm-f1r">
+                                <rect key="frame" x="499" y="131" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="sXk-5O-DdN"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="ZOf-Yw-XD2" id="q93-sQ-3v6"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-zT-DMd">
+                                <rect key="frame" x="520" y="111" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Rgs-ht-erH"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-lt-vQi">
+                                <rect key="frame" x="499" y="106" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="iAZ-TV-Fpf"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="qR0-zT-DMd" id="WtD-R7-K0Q"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3L-FE-GMD">
+                                <rect key="frame" x="520" y="85" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="q3v-fg-Gma"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-7k-gN7">
+                                <rect key="frame" x="499" y="80" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="QPj-tw-bkO"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="I3L-FE-GMD" id="H8b-Pm-DpZ"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-I7-MJd">
+                                <rect key="frame" x="520" y="62" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="qGS-P3-kXN"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uv6-bJ-y1j">
+                                <rect key="frame" x="499" y="57" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="ajT-6B-fl4"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="4yU-I7-MJd" id="aqv-8W-Dtc"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-oA-hM4">
+                                <rect key="frame" x="520" y="37" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="SFi-oF-xQe"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-Q3-t6l">
+                                <rect key="frame" x="499" y="32" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="CVR-Pn-PW7"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="Dg0-oA-hM4" id="uKc-x2-BAV"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kee-2O-DLI">
+                                <rect key="frame" x="520" y="11" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="WQ2-va-5VP"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CmP-y8-FgT">
+                                <rect key="frame" x="499" y="6" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="3" id="baZ-ax-bRo"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="kee-2O-DLI" id="vKZ-Da-aTC"/>
+                                </connections>
+                            </stepper>
+                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-Iv-R5G">
+                                <rect key="frame" x="635" y="306" width="561" height="170"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="Reputation" identifier="0" id="7JB-w6-igC">
+                                        <view key="view" id="wu9-ed-uWe">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="5gY-T5-LeG">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="zWX-6Z-l0A">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-qq-4AJ" userLabel="Rep Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Strong Willed" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="aMJ-uQ-8iE" id="8fQ-XC-hSi">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="WFq-Rm-m8W">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" id="aQG-Gs-1xb"/>
+                                                                <menuItem title="Charismatic" id="Do7-N0-att"/>
+                                                                <menuItem title="Confident" id="GII-YQ-bZj"/>
+                                                                <menuItem title="Favoured by Fortune" id="m5F-l3-ynh"/>
+                                                                <menuItem title="Fearless" id="hTo-CC-v5c"/>
+                                                                <menuItem title="Gregarious" id="ua4-Kz-GxX"/>
+                                                                <menuItem title="I Know a Guy..." id="frR-fL-guO"/>
+                                                                <menuItem title="Icy Stare" id="hQY-B1-LbZ"/>
+                                                                <menuItem title="Intimidation Presence" id="DGz-wj-Iz0"/>
+                                                                <menuItem title="Magc Empathy" id="4bQ-zU-6a7"/>
+                                                                <menuItem title="Notorious" id="m4a-S8-Lsl"/>
+                                                                <menuItem title="Resourceful" id="ops-M4-rsS"/>
+                                                                <menuItem title="Shady" id="Iuy-dG-RFr"/>
+                                                                <menuItem title="Silver Tongue" id="DmO-wn-hZb"/>
+                                                                <menuItem title="Strong Willed" state="on" id="aMJ-uQ-8iE"/>
+                                                                <menuItem title="University Education" id="SNg-ke-8oP"/>
+                                                                <menuItem title="Voice of Reason" id="9Vb-Fj-GxR"/>
+                                                                <menuItem title="Weatherbeaten" id="sSS-UU-zty"/>
+                                                                <menuItem title="Well-Traveled" id="cql-04-Q8R"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Tactic" identifier="1" id="3YE-RZ-ntW">
+                                        <view key="view" id="FO3-zh-APd">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="7hG-jQ-kOQ">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="jdx-pY-wWs">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0o-Ve-bhz" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="E7g-Yx-1zd">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="B1V-5N-3uL">
+                                                            <items>
+                                                                <menuItem title="Catlike Reflexex" id="7ww-Eo-5TJ"/>
+                                                                <menuItem title="Charge" id="AVF-HC-7zW"/>
+                                                                <menuItem title="Combat Alertness" id="YkD-M7-ygq"/>
+                                                                <menuItem title="Coordinared Efforts" id="Vrg-lj-m7u"/>
+                                                                <menuItem title="Exceptional Training" id="X7l-3I-vSa"/>
+                                                                <menuItem title="Flanking Manoeuvre" id="GNu-Qu-Bac"/>
+                                                                <menuItem title="Girding Oneself" id="wLr-uJ-B39"/>
+                                                                <menuItem title="I'll Sleep When I'm Dead" id="FTv-sw-9TB"/>
+                                                                <menuItem title="Lead by Example" id="3Nt-nJ-Zmu"/>
+                                                                <menuItem title="Lead from the Front" id="6Ff-wb-lHO"/>
+                                                                <menuItem title="Might Makes Right" id="RGo-Bj-8OZ"/>
+                                                                <menuItem title="Relentless Approach" id="B5T-TZ-C76"/>
+                                                                <menuItem title="Relentless Pursuit" id="wHC-VW-ghc"/>
+                                                                <menuItem title="Robust" id="CEK-AK-axd"/>
+                                                                <menuItem title="Shield Wall" id="3WI-3c-p51"/>
+                                                                <menuItem title="Strenght in Numbers" id="YlZ-Zn-nAI"/>
+                                                                <menuItem title="Timely Surge" id="6Sb-fB-LnV"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Focus" identifier="2" id="FL8-f0-cp3">
+                                        <view key="view" id="Fnr-Dz-8AP">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-jB-KsN">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="8fw-R2-2ac">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVB-iL-mBm" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="QuG-bK-xs4">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="S7c-gD-gSK">
+                                                            <items>
+                                                                <menuItem title="Aethyric Conduit" id="djV-NV-lOe"/>
+                                                                <menuItem title="Clear Minded" id="jzO-LN-HKi"/>
+                                                                <menuItem title="Clever" id="MEn-yn-5Yg"/>
+                                                                <menuItem title="Contemplative" id="V7Y-AQ-iHN"/>
+                                                                <menuItem title="Creative Thinking" id="kym-uB-eZj"/>
+                                                                <menuItem title="Deductive Reasoning" id="8h1-6G-R48"/>
+                                                                <menuItem title="Determined" id="ogn-kb-KQf"/>
+                                                                <menuItem title="Foresight" id="dVU-Rp-c3w"/>
+                                                                <menuItem title="I Seem to Recall..." id="69Y-L4-feW"/>
+                                                                <menuItem title="Instinctive" id="LOh-hm-flg"/>
+                                                                <menuItem title="I've Seen Worse..." id="eGC-s1-ImW"/>
+                                                                <menuItem title="Jack of All Trades" id="LGs-K5-Hrd"/>
+                                                                <menuItem title="Keen Eyes" id="muf-ac-5bn"/>
+                                                                <menuItem title="Quick Wits" id="Mht-IU-nlm"/>
+                                                                <menuItem title="Resolute" id="liq-Zj-eA6"/>
+                                                                <menuItem title="Shadow Stalker" id="Q5u-go-oZV"/>
+                                                                <menuItem title="Skygazer" state="on" id="3M4-yf-2ZZ"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Faith" identifier="2" id="V3B-BM-Kyz">
+                                        <view key="view" id="Qg9-UH-4Ty">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="RHT-0r-oTx">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="oK4-q2-FQX">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzx-5I-Akt" userLabel="Faith">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="BUB-98-ZYR">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="en4-Bq-9Nc">
+                                                            <items>
+                                                                <menuItem title="Morr, God of Dreams &amp; Death" id="O1N-Qa-AvX"/>
+                                                                <menuItem title="Shallya, Goddess of Healing &amp; Mercy" id="6mj-cx-wDj"/>
+                                                                <menuItem title="Sigmar, God of the Empire" id="rqc-WP-FlR"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Order" identifier="2" id="Gf4-ok-QfV">
+                                        <view key="view" ambiguous="YES" id="c4q-fG-O3G">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-YF-Jkx" userLabel="Order Names">
+                                                    <rect key="frame" x="-5" y="84" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Better Luck Then Good" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="vuy-pA-YHw" id="hsZ-1g-Gr1">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="YuL-2d-Vfg">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" state="on" id="vuy-pA-YHw"/>
+                                                                <menuItem title="Charismatic" id="0qY-el-gez"/>
+                                                                <menuItem title="Confident" id="4Wo-JQ-SiV"/>
+                                                                <menuItem title="Favoured by Fortune" id="PKS-zk-cf6"/>
+                                                                <menuItem title="Fearless" id="DXd-XN-XP7"/>
+                                                                <menuItem title="Gregarious" id="LWJ-ha-cpK"/>
+                                                                <menuItem title="I Know a Guy..." id="7na-ZG-bib"/>
+                                                                <menuItem title="Icy Stare" id="cOk-vA-Laz"/>
+                                                                <menuItem title="Intimidation Presence" id="EuI-dI-SVY"/>
+                                                                <menuItem title="Magc Empathy" id="ZMi-g4-xE3"/>
+                                                                <menuItem title="Notorious" id="Phq-3s-vid"/>
+                                                                <menuItem title="Resourceful" id="vhM-ea-RbN"/>
+                                                                <menuItem title="Shady" id="wHh-aS-IKs"/>
+                                                                <menuItem title="Silver Tongue" id="X08-5r-Kfy"/>
+                                                                <menuItem title="Strong Willrf" id="Rme-5T-cmI"/>
+                                                                <menuItem title="University Education" id="FkL-aR-PBV"/>
+                                                                <menuItem title="Voice of Reason" id="qkA-hp-6VQ"/>
+                                                                <menuItem title="Weatherbeaten" id="m5H-jl-0iV"/>
+                                                                <menuItem title="Well-Traveled" id="i55-c0-8Gi"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-gh-AJu">
+                                                    <rect key="frame" x="131" y="-6" width="404" height="125"/>
+                                                    <view key="contentView" id="s1g-JW-5gp">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Witchcraft" identifier="2" id="ozG-LY-ytP">
+                                        <view key="view" id="kZb-HV-hdp">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="TyV-c9-G0C" secondAttribute="centerY" id="Rxv-Yd-F43"/>
-                            <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="careerMenu" destination="PbE-Ss-bQQ" id="Zvn-Yk-a0E"/>
+                        <outlet property="raceMenu" destination="idw-mS-wSb" id="aTi-Pk-xLa"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="196" y="844"/>
         </scene>
     </scenes>
 </document>
