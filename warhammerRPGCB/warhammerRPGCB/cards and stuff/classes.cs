@@ -275,6 +275,7 @@ namespace warhammerRPGCB
 			theif.stanceGreen = 1;
 			theif.primaryChar = "Agility, Fellowship";
 			theif.talentSlots = new string [] {"focusTalent","reputationTalent"};
+
 			classes thug = new classes();
 			thug.className = "Thug";
 			thug.carrerSkills = "Athletics, Guile, Intimidation, Skullduggery, Weapon Skill";

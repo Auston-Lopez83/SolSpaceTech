@@ -674,7 +674,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-ii-EsA" userLabel="Race Menu">
-                                <rect key="frame" x="24" y="555" width="159" height="26"/>
+                                <rect key="frame" x="24" y="556" width="159" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="idw-mS-wSb">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -766,7 +766,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-xq-Cac">
-                                <rect key="frame" x="52" y="401" width="103" height="30"/>
+                                <rect key="frame" x="46" y="401" width="103" height="30"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Toughness" id="Dda-WX-ftm">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -774,7 +774,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-0A-ttm">
-                                <rect key="frame" x="73" y="332" width="60" height="26"/>
+                                <rect key="frame" x="64" y="332" width="60" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Agility" id="bqt-tP-CN1">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -862,7 +862,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="3kt-He-QEz">
-                                <rect key="frame" x="34" y="286" width="600" height="5"/>
+                                <rect key="frame" x="34" y="261" width="600" height="48"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -1131,7 +1131,7 @@
                             </box>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rD-v7-Xi9">
                                 <rect key="frame" x="520" y="494" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="JcW-4s-d6N"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="JcW-4s-d6N"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-fa-Xxn">
                                 <rect key="frame" x="499" y="489" width="19" height="27"/>
@@ -1142,7 +1142,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBD-2L-YVy">
                                 <rect key="frame" x="520" y="469" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="9Ou-d2-cmn"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="9Ou-d2-cmn"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-cV-a3p">
                                 <rect key="frame" x="499" y="464" width="19" height="27"/>
@@ -1153,7 +1153,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-jb-2hE">
                                 <rect key="frame" x="520" y="443" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="LKK-Nj-Ios"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="LKK-Nj-Ios"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-VC-imO">
                                 <rect key="frame" x="499" y="438" width="19" height="27"/>
@@ -1164,7 +1164,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W46-zS-RVq">
                                 <rect key="frame" x="520" y="420" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="wxr-Z7-RvN"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="wxr-Z7-RvN"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xv4-Ij-OcH">
                                 <rect key="frame" x="499" y="415" width="19" height="27"/>
@@ -1175,7 +1175,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpD-R0-jFm">
                                 <rect key="frame" x="520" y="395" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="JSk-O3-hjU"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="JSk-O3-hjU"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcQ-nW-UfW">
                                 <rect key="frame" x="499" y="390" width="19" height="27"/>
@@ -1186,7 +1186,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpV-ph-4UK">
                                 <rect key="frame" x="520" y="369" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Ifk-av-hkH"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="Ifk-av-hkH"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGl-la-eIG">
                                 <rect key="frame" x="499" y="364" width="19" height="27"/>
@@ -1197,7 +1197,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-uC-okM">
                                 <rect key="frame" x="520" y="346" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Wpp-jq-NPn"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="Wpp-jq-NPn"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-hK-80R">
                                 <rect key="frame" x="499" y="341" width="19" height="27"/>
@@ -1208,7 +1208,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9f-AP-hiU">
                                 <rect key="frame" x="520" y="321" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="hnB-aR-XhJ"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="hnB-aR-XhJ"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-FM-bxU">
                                 <rect key="frame" x="499" y="316" width="19" height="27"/>
@@ -1219,7 +1219,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAi-jK-C5Y">
                                 <rect key="frame" x="520" y="295" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="15o-If-LDs"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="15o-If-LDs"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="puV-Is-eMF">
                                 <rect key="frame" x="499" y="290" width="19" height="27"/>
@@ -1230,7 +1230,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-er-XIS">
                                 <rect key="frame" x="520" y="260" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="574-sK-ZcG"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="574-sK-ZcG"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-na-SOt">
                                 <rect key="frame" x="499" y="255" width="19" height="27"/>
@@ -1241,7 +1241,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7G5-Nx-N4X">
                                 <rect key="frame" x="520" y="235" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="xsp-Ee-Grn"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="xsp-Ee-Grn"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-st-7as">
                                 <rect key="frame" x="499" y="230" width="19" height="27"/>
@@ -1252,7 +1252,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-8Q-u0q">
                                 <rect key="frame" x="520" y="209" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="sRo-i0-Fsa"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="sRo-i0-Fsa"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8X1-CV-PXa">
                                 <rect key="frame" x="499" y="204" width="19" height="27"/>
@@ -1263,7 +1263,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-Yw-XD2">
                                 <rect key="frame" x="520" y="186" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="1hN-3R-vcE"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="1hN-3R-vcE"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-Wm-f1r">
                                 <rect key="frame" x="499" y="181" width="19" height="27"/>
@@ -1274,7 +1274,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-zT-DMd">
                                 <rect key="frame" x="520" y="161" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="Rgs-ht-erH"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="Rgs-ht-erH"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-lt-vQi">
                                 <rect key="frame" x="499" y="156" width="19" height="27"/>
@@ -1285,7 +1285,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3L-FE-GMD">
                                 <rect key="frame" x="520" y="135" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="q3v-fg-Gma"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="q3v-fg-Gma"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-7k-gN7">
                                 <rect key="frame" x="499" y="130" width="19" height="27"/>
@@ -1296,7 +1296,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-I7-MJd">
                                 <rect key="frame" x="520" y="112" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="qGS-P3-kXN"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="qGS-P3-kXN"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uv6-bJ-y1j">
                                 <rect key="frame" x="499" y="107" width="19" height="27"/>
@@ -1307,7 +1307,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-oA-hM4">
                                 <rect key="frame" x="520" y="87" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="SFi-oF-xQe"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="SFi-oF-xQe"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-Q3-t6l">
                                 <rect key="frame" x="499" y="82" width="19" height="27"/>
@@ -1318,7 +1318,7 @@
                             </stepper>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kee-2O-DLI">
                                 <rect key="frame" x="520" y="61" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" criticalValue="3" id="WQ2-va-5VP"/>
+                                <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="WQ2-va-5VP"/>
                             </levelIndicator>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CmP-y8-FgT">
                                 <rect key="frame" x="499" y="56" width="19" height="27"/>
@@ -1327,6 +1327,114 @@
                                     <action selector="takeIntegerValueFrom:" target="kee-2O-DLI" id="vKZ-Da-aTC"/>
                                 </connections>
                             </stepper>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-kp-1BG">
+                                <rect key="frame" x="123" y="440" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="INZ-hx-jfV"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="ORN-Sp-E7J" id="WHb-uC-b20"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-vz-hd6">
+                                <rect key="frame" x="72" y="438" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ORN-Sp-E7J">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Jy4-5v-hyc"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-PM-y1u">
+                                <rect key="frame" x="123" y="368" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="CZ0-hq-myr"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="nR0-RQ-s85" id="vBy-B7-rOb"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-e9-2cw">
+                                <rect key="frame" x="72" y="366" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nR0-RQ-s85">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="hq5-Ep-Aew"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i09-Bo-HTe">
+                                <rect key="frame" x="123" y="299" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="H1W-hR-Xgi"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="geS-Ha-6ju" id="agY-po-aXK"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efy-E0-XyU">
+                                <rect key="frame" x="72" y="297" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geS-Ha-6ju">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="WtV-Pg-tXt"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-dx-95b">
+                                <rect key="frame" x="122" y="215" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="Ayo-nz-VRe"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="Fd8-1W-Mkr" id="YSR-8V-2O9"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-dj-em2">
+                                <rect key="frame" x="71" y="213" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fd8-1W-Mkr">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="vYR-LX-xe1"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-Qh-69U">
+                                <rect key="frame" x="119" y="133" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="61E-9W-vfL"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="eQH-W7-tNX" id="g7n-zy-ma6"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-eB-ZB2">
+                                <rect key="frame" x="68" y="131" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eQH-W7-tNX">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Rt9-ey-pMI"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i07-Dm-QjD">
+                                <rect key="frame" x="117" y="51" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="aX3-hh-gfl"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="gr9-EH-Lnc" id="jdV-d9-eO3"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tX-d8-yJ6">
+                                <rect key="frame" x="66" y="49" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gr9-EH-Lnc">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="7WC-eL-XTM"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-V6-raK">
+                                <rect key="frame" x="42" y="90" width="123" height="24"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fellowship" id="ZHo-uf-Wuj">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0J-PM-sg3">
+                                <rect key="frame" x="791" y="601" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" doubleValue="3" maxValue="3" criticalValue="1" id="iRk-66-h7x"/>
+                            </levelIndicator>
                             <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-Iv-R5G">
                                 <rect key="frame" x="635" y="356" width="561" height="170"/>
                                 <font key="font" metaFont="system"/>
@@ -1554,110 +1662,6 @@
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-kp-1BG">
-                                <rect key="frame" x="123" y="440" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="INZ-hx-jfV"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="ORN-Sp-E7J" id="WHb-uC-b20"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-vz-hd6">
-                                <rect key="frame" x="72" y="438" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ORN-Sp-E7J">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Jy4-5v-hyc"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-PM-y1u">
-                                <rect key="frame" x="123" y="368" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="CZ0-hq-myr"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="nR0-RQ-s85" id="vBy-B7-rOb"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-e9-2cw">
-                                <rect key="frame" x="72" y="366" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nR0-RQ-s85">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="hq5-Ep-Aew"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i09-Bo-HTe">
-                                <rect key="frame" x="123" y="299" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="H1W-hR-Xgi"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="geS-Ha-6ju" id="agY-po-aXK"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efy-E0-XyU">
-                                <rect key="frame" x="72" y="297" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geS-Ha-6ju">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="WtV-Pg-tXt"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-dx-95b">
-                                <rect key="frame" x="122" y="215" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="Ayo-nz-VRe"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="Fd8-1W-Mkr" id="YSR-8V-2O9"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-dj-em2">
-                                <rect key="frame" x="71" y="213" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fd8-1W-Mkr">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="vYR-LX-xe1"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-Qh-69U">
-                                <rect key="frame" x="119" y="133" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="61E-9W-vfL"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="eQH-W7-tNX" id="g7n-zy-ma6"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-eB-ZB2">
-                                <rect key="frame" x="68" y="131" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eQH-W7-tNX">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Rt9-ey-pMI"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i07-Dm-QjD">
-                                <rect key="frame" x="117" y="51" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="aX3-hh-gfl"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="gr9-EH-Lnc" id="jdV-d9-eO3"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tX-d8-yJ6">
-                                <rect key="frame" x="66" y="49" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gr9-EH-Lnc">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="7WC-eL-XTM"/>
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-V6-raK">
-                                <rect key="frame" x="42" y="90" width="123" height="24"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fellowship" id="ZHo-uf-Wuj">
-                                    <font key="font" metaFont="system" size="20"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1667,7 +1671,7 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="815"/>
+            <point key="canvasLocation" x="332" y="1002"/>
         </scene>
     </scenes>
 </document>
