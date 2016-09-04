@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -1562,7 +1563,23 @@
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYU-Kl-mnN">
+                                <rect key="frame" x="95" y="396" width="16" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" placeholderString="2" id="eTA-V4-KB3" userLabel="strstat">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="mOa-ym-IVk"/>
+                                    <font key="font" metaFont="system" size="17"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-kp-1BG">
+                                <rect key="frame" x="121" y="388" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="5" doubleValue="2" id="INZ-hx-jfV"/>
+                            </stepper>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="TCd-kp-1BG" firstAttribute="width" secondItem="QYU-Kl-mnN" secondAttribute="height" multiplier="13:17" id="pXq-aM-SXd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="careerMenu" destination="PbE-Ss-bQQ" id="Zvn-Yk-a0E"/>
