@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
@@ -730,7 +729,7 @@
                                             <menuItem title="Forger" id="rAW-d1-9GX"/>
                                             <menuItem title="Gambler" id="rwO-sf-eJT"/>
                                             <menuItem title="Giant Slayer" id="1RQ-SZ-j8I"/>
-                                            <menuItem title="Grave Robber" state="on" id="x2X-mR-hD8"/>
+                                            <menuItem title="Grave Robber" id="x2X-mR-hD8"/>
                                             <menuItem title="Hunter" id="dCl-v2-abN"/>
                                             <menuItem title="Initiate" id="tiI-a3-oEU"/>
                                             <menuItem title="Mercenary" id="WQ8-5e-BnJ"/>
@@ -1341,12 +1340,12 @@
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Reputation" identifier="0" id="7JB-w6-igC">
-                                        <view key="view" id="wu9-ed-uWe">
-                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                        <view key="view" ambiguous="YES" id="wu9-ed-uWe">
+                                            <rect key="frame" x="10" y="33" width="367" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="5gY-T5-LeG">
-                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <rect key="frame" x="131" y="-128" width="404" height="125"/>
                                                     <view key="contentView" id="zWX-6Z-l0A">
                                                         <rect key="frame" x="1" y="1" width="402" height="109"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1355,7 +1354,7 @@
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
                                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-qq-4AJ" userLabel="Rep Names">
-                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <rect key="frame" x="-5" y="-39" width="134" height="26"/>
                                                     <popUpButtonCell key="cell" type="push" title="Strong Willed" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="aMJ-uQ-8iE" id="8fQ-XC-hSi">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="menu"/>
@@ -1469,7 +1468,7 @@
                                                                 <menuItem title="Quick Wits" id="Mht-IU-nlm"/>
                                                                 <menuItem title="Resolute" id="liq-Zj-eA6"/>
                                                                 <menuItem title="Shadow Stalker" id="Q5u-go-oZV"/>
-                                                                <menuItem title="Skygazer" state="on" id="3M4-yf-2ZZ"/>
+                                                                <menuItem title="Skygazer" id="3M4-yf-2ZZ"/>
                                                             </items>
                                                         </menu>
                                                     </popUpButtonCell>
@@ -1509,7 +1508,7 @@
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Order" identifier="2" id="Gf4-ok-QfV">
-                                        <view key="view" ambiguous="YES" id="c4q-fG-O3G">
+                                        <view key="view" id="c4q-fG-O3G">
                                             <rect key="frame" x="10" y="33" width="541" height="124"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
