@@ -10,6 +10,7 @@
 //
 //
 using AppKit;
+using System;
 
 namespace warhammerRPGCB
 {
@@ -19,6 +20,8 @@ namespace warhammerRPGCB
 		{
 			NSApplication.Init();
 			NSApplication.Main(args);
+
+			Console.WriteLine("hello, World!");
 
 		}
 	}

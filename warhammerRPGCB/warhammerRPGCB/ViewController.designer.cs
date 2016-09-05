@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
@@ -17,17 +17,23 @@ namespace warhammerRPGCB
 
 		[Outlet]
 		AppKit.NSPopUpButtonCell raceMenu { get; set; }
+
+		[Action ("raceSelect:")]
+		partial void raceSelect (Foundation.NSObject sender);
+
+		[Action ("strenght:")]
+		partial void strenght (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (raceMenu != null) {
-				raceMenu.Dispose ();
-				raceMenu = null;
-			}
-
 			if (careerMenu != null) {
 				careerMenu.Dispose ();
 				careerMenu = null;
+			}
+
+			if (raceMenu != null) {
+				raceMenu.Dispose ();
+				raceMenu = null;
 			}
 		}
 	}
