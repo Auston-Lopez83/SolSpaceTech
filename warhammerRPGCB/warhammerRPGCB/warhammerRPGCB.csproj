@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\race" />
+    <BundleResource Include="Resources\6020-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

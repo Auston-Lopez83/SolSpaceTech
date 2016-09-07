@@ -18,11 +18,11 @@ namespace warhammerRPGCB
 		[Outlet]
 		AppKit.NSPopUpButtonCell raceMenu { get; set; }
 
-		[Action ("raceSelect:")]
-		partial void raceSelect (Foundation.NSObject sender);
+		[Outlet]
+		AppKit.NSTextField strStat { get; set; }
 
-		[Action ("strenght:")]
-		partial void strenght (Foundation.NSObject sender);
+		[Action ("chooseARace:")]
+		partial void chooseARace (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -34,6 +34,11 @@ namespace warhammerRPGCB
 			if (raceMenu != null) {
 				raceMenu.Dispose ();
 				raceMenu = null;
+			}
+
+			if (strStat != null) {
+				strStat.Dispose ();
+				strStat = null;
 			}
 		}
 	}

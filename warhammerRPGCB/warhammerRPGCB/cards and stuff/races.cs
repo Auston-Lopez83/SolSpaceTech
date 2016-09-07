@@ -12,7 +12,7 @@
 using System;
 namespace warhammerRPGCB
 {
-	public class races
+	public  class races
 	{
 		string raceName;
 		//string raceSkillName;
@@ -30,7 +30,7 @@ namespace warhammerRPGCB
 
 
 
-		public races()
+		public races() 
 		{
 			races human = new races();
 			human.raceName = "Human";

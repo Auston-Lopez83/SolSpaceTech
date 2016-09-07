@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
@@ -675,7 +676,7 @@
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-ii-EsA" userLabel="Race Menu">
                                 <rect key="frame" x="24" y="556" width="159" height="26"/>
-                                <popUpButtonCell key="cell" type="push" title="Wood Elf" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Ogu-rV-hUj" id="idw-mS-wSb">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="idw-mS-wSb">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="gku-bC-TJn">
@@ -683,12 +684,12 @@
                                             <menuItem title="Human" id="Iu6-zW-JNo"/>
                                             <menuItem title="Dwarf" id="IbZ-m0-o7f"/>
                                             <menuItem title="High Elf" id="twH-Js-bxs"/>
-                                            <menuItem title="Wood Elf" state="on" id="Ogu-rV-hUj"/>
+                                            <menuItem title="Wood Elf" id="Ogu-rV-hUj"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
-                                    <action selector="raceSelect:" target="5gI-5U-AMq" id="ceW-lc-7Yr"/>
+                                    <action selector="chooseARace:" target="5gI-5U-AMq" id="9Ns-f6-yR5"/>
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSd-y4-ZDl">
@@ -1120,12 +1121,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="J12-Yz-dQ9">
-                                <rect key="frame" x="586" y="49" width="5" height="475"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
                             <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rD-v7-Xi9">
                                 <rect key="frame" x="520" y="494" width="96" height="18"/>
                                 <levelIndicatorCell key="cell" alignment="left" maxValue="3" warningValue="3" id="JcW-4s-d6N"/>
@@ -1324,6 +1319,631 @@
                                     <action selector="takeIntegerValueFrom:" target="kee-2O-DLI" id="vKZ-Da-aTC"/>
                                 </connections>
                             </stepper>
+                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WjY-rV-lHs">
+                                <rect key="frame" x="635" y="184" width="561" height="170"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="Reputation" identifier="0" id="l4q-vp-132">
+                                        <view key="view" ambiguous="YES" id="TPH-P7-CJU">
+                                            <rect key="frame" x="10" y="33" width="367" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="zUx-SY-IcB">
+                                                    <rect key="frame" x="131" y="-128" width="404" height="125"/>
+                                                    <view key="contentView" id="oOL-Pk-qV7">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weR-KI-acN" userLabel="Rep Names">
+                                                    <rect key="frame" x="-5" y="-39" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Strong Willed" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="qap-vs-4L1" id="lPV-Hd-CHY">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="gAf-QE-G5l">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" id="2nC-ct-PrJ"/>
+                                                                <menuItem title="Charismatic" id="bW4-mv-aU5"/>
+                                                                <menuItem title="Confident" id="Xj8-Ps-ELt"/>
+                                                                <menuItem title="Favoured by Fortune" id="4If-8W-V92"/>
+                                                                <menuItem title="Fearless" id="Dxe-pv-sNq"/>
+                                                                <menuItem title="Gregarious" id="skf-Ot-DTh"/>
+                                                                <menuItem title="I Know a Guy..." id="uQL-0u-poX"/>
+                                                                <menuItem title="Icy Stare" id="B47-dk-WUL"/>
+                                                                <menuItem title="Intimidation Presence" id="MS3-wa-y8f"/>
+                                                                <menuItem title="Magc Empathy" id="2Z3-oA-aXY"/>
+                                                                <menuItem title="Notorious" id="SvP-EJ-AFd"/>
+                                                                <menuItem title="Resourceful" id="HKx-uf-ioL"/>
+                                                                <menuItem title="Shady" id="xPv-oi-R54"/>
+                                                                <menuItem title="Silver Tongue" id="bte-b0-9Gk"/>
+                                                                <menuItem title="Strong Willed" state="on" id="qap-vs-4L1"/>
+                                                                <menuItem title="University Education" id="dTO-mr-0Bw"/>
+                                                                <menuItem title="Voice of Reason" id="qzu-0V-i3I"/>
+                                                                <menuItem title="Weatherbeaten" id="pSh-In-sW3"/>
+                                                                <menuItem title="Well-Traveled" id="rws-Yg-bhP"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Tactic" identifier="1" id="GO1-VH-ZnS">
+                                        <view key="view" id="IwO-Tm-wf8">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="5zT-GB-ED1">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="0lq-G9-Df5">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-pK-i7o" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="gUy-8M-gBj">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="wdl-WB-mxw">
+                                                            <items>
+                                                                <menuItem title="Catlike Reflexex" id="ya1-0L-Kcx"/>
+                                                                <menuItem title="Charge" id="i0i-LH-usT"/>
+                                                                <menuItem title="Combat Alertness" id="pOT-q4-Qbk"/>
+                                                                <menuItem title="Coordinared Efforts" id="CLq-lB-FFb"/>
+                                                                <menuItem title="Exceptional Training" id="B5k-d8-H7G"/>
+                                                                <menuItem title="Flanking Manoeuvre" id="sFa-Dq-Qjr"/>
+                                                                <menuItem title="Girding Oneself" id="YVK-xE-oms"/>
+                                                                <menuItem title="I'll Sleep When I'm Dead" id="Ps4-Xu-imW"/>
+                                                                <menuItem title="Lead by Example" id="2Ao-9g-z8Y"/>
+                                                                <menuItem title="Lead from the Front" id="G1R-Bz-OIh"/>
+                                                                <menuItem title="Might Makes Right" id="q55-fv-5rs"/>
+                                                                <menuItem title="Relentless Approach" id="J2i-lx-j28"/>
+                                                                <menuItem title="Relentless Pursuit" id="2zu-5W-Tan"/>
+                                                                <menuItem title="Robust" id="8w8-3P-dUU"/>
+                                                                <menuItem title="Shield Wall" id="pge-qI-MuV"/>
+                                                                <menuItem title="Strenght in Numbers" id="89Z-TQ-e9Z"/>
+                                                                <menuItem title="Timely Surge" id="o6R-Pm-hZM"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Focus" identifier="2" id="bl9-uk-f6r">
+                                        <view key="view" id="APk-bS-Msn">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="3HU-IR-Zlw">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="59j-Mw-IPw">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0v-Vd-Hcc" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="rr9-g0-dbN">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="iEx-6c-dXD">
+                                                            <items>
+                                                                <menuItem title="Aethyric Conduit" id="iP9-hT-TOT"/>
+                                                                <menuItem title="Clear Minded" id="RAT-Fn-Z7Z"/>
+                                                                <menuItem title="Clever" id="bk6-NJ-xoq"/>
+                                                                <menuItem title="Contemplative" id="zFg-9E-h0j"/>
+                                                                <menuItem title="Creative Thinking" id="ewt-UN-Roy"/>
+                                                                <menuItem title="Deductive Reasoning" id="2J7-9F-ky3"/>
+                                                                <menuItem title="Determined" id="mVm-ya-JAu"/>
+                                                                <menuItem title="Foresight" id="bAh-HH-2ie"/>
+                                                                <menuItem title="I Seem to Recall..." id="MB8-Pc-4kA"/>
+                                                                <menuItem title="Instinctive" id="PiE-fM-O6K"/>
+                                                                <menuItem title="I've Seen Worse..." id="pQO-4u-U2e"/>
+                                                                <menuItem title="Jack of All Trades" id="LQk-Zx-o3f"/>
+                                                                <menuItem title="Keen Eyes" id="CvY-L7-XMK"/>
+                                                                <menuItem title="Quick Wits" id="jgY-ef-klT"/>
+                                                                <menuItem title="Resolute" id="Mo8-tP-6kf"/>
+                                                                <menuItem title="Shadow Stalker" id="Zcs-dH-Pvq"/>
+                                                                <menuItem title="Skygazer" id="mMe-cm-6BH"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Faith" identifier="2" id="a71-4Y-SP0">
+                                        <view key="view" id="wC7-nH-Sie">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="TRn-DD-eGg">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="Ak3-Kb-Og8">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8s-pg-70V" userLabel="Faith">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="g3r-6L-dZB">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="Xja-rE-Nym">
+                                                            <items>
+                                                                <menuItem title="Morr, God of Dreams &amp; Death" id="tJ9-3s-gWA"/>
+                                                                <menuItem title="Shallya, Goddess of Healing &amp; Mercy" id="wP5-wE-cTI"/>
+                                                                <menuItem title="Sigmar, God of the Empire" id="25Y-3j-Zup"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Order" identifier="2" id="8Fs-Oh-wJg">
+                                        <view key="view" id="z7I-DD-hs1">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7S-Ha-q7X" userLabel="Order Names">
+                                                    <rect key="frame" x="-5" y="84" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Better Luck Then Good" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="NhK-Ds-ATM" id="Oq6-np-5f0">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="ZXS-mx-PFV">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" state="on" id="NhK-Ds-ATM"/>
+                                                                <menuItem title="Charismatic" id="RX8-1L-djE"/>
+                                                                <menuItem title="Confident" id="UnT-Tt-Cg8"/>
+                                                                <menuItem title="Favoured by Fortune" id="agu-zy-mFH"/>
+                                                                <menuItem title="Fearless" id="frX-1O-srR"/>
+                                                                <menuItem title="Gregarious" id="7Bi-7b-MSQ"/>
+                                                                <menuItem title="I Know a Guy..." id="yxm-pA-dGL"/>
+                                                                <menuItem title="Icy Stare" id="XoS-aI-5N4"/>
+                                                                <menuItem title="Intimidation Presence" id="uKI-CF-Awg"/>
+                                                                <menuItem title="Magc Empathy" id="QL6-S6-1Eu"/>
+                                                                <menuItem title="Notorious" id="MKc-GR-0Cr"/>
+                                                                <menuItem title="Resourceful" id="tiU-tX-2tF"/>
+                                                                <menuItem title="Shady" id="7C1-Ei-KzP"/>
+                                                                <menuItem title="Silver Tongue" id="ix9-3x-NjB"/>
+                                                                <menuItem title="Strong Willrf" id="N7o-AA-FIR"/>
+                                                                <menuItem title="University Education" id="1VA-Pc-6Xd"/>
+                                                                <menuItem title="Voice of Reason" id="48W-yG-n4F"/>
+                                                                <menuItem title="Weatherbeaten" id="9RA-ag-i6D"/>
+                                                                <menuItem title="Well-Traveled" id="psV-Wr-xak"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-5K-YAt">
+                                                    <rect key="frame" x="131" y="-6" width="404" height="125"/>
+                                                    <view key="contentView" id="fno-mx-B4R">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Witchcraft" identifier="2" id="s7w-3K-SVO">
+                                        <view key="view" id="daV-ft-fh4">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g25-Y0-U3H" userLabel="Order Names">
+                                                    <rect key="frame" x="1" y="86" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Hedge Magic" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dxq-LI-yGm" id="YxX-rz-rwg">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="IJP-aY-vG6">
+                                                            <items>
+                                                                <menuItem title="Hedge Magic" state="on" id="dxq-LI-yGm"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-Du-RB8">
+                                                    <rect key="frame" x="137" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="ghH-iW-LJG">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-kp-1BG">
+                                <rect key="frame" x="123" y="440" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="INZ-hx-jfV"/>
+                            </stepper>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-PM-y1u">
+                                <rect key="frame" x="123" y="368" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="CZ0-hq-myr"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="nR0-RQ-s85" id="vBy-B7-rOb"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-e9-2cw">
+                                <rect key="frame" x="72" y="366" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nR0-RQ-s85">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="hq5-Ep-Aew"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i09-Bo-HTe">
+                                <rect key="frame" x="123" y="299" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="H1W-hR-Xgi"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="geS-Ha-6ju" id="agY-po-aXK"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efy-E0-XyU">
+                                <rect key="frame" x="72" y="297" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geS-Ha-6ju">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="WtV-Pg-tXt"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-dx-95b">
+                                <rect key="frame" x="123" y="215" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="Ayo-nz-VRe"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="Fd8-1W-Mkr" id="YSR-8V-2O9"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-dj-em2">
+                                <rect key="frame" x="72" y="213" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fd8-1W-Mkr">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="vYR-LX-xe1"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-Qh-69U">
+                                <rect key="frame" x="123" y="132" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="61E-9W-vfL"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="eQH-W7-tNX" id="g7n-zy-ma6"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-eB-ZB2">
+                                <rect key="frame" x="72" y="130" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eQH-W7-tNX">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Rt9-ey-pMI"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i07-Dm-QjD">
+                                <rect key="frame" x="123" y="51" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="aX3-hh-gfl"/>
+                                <connections>
+                                    <action selector="takeIntegerValueFrom:" target="gr9-EH-Lnc" id="jdV-d9-eO3"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tX-d8-yJ6">
+                                <rect key="frame" x="72" y="49" width="46" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gr9-EH-Lnc">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="7WC-eL-XTM"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-V6-raK">
+                                <rect key="frame" x="42" y="90" width="123" height="24"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fellowship" id="ZHo-uf-Wuj">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0J-PM-sg3">
+                                <rect key="frame" x="566" y="560" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" alignment="left" doubleValue="3" maxValue="3" criticalValue="1" id="iRk-66-h7x" userLabel="reckless"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-Ef-byL">
+                                <rect key="frame" x="438" y="556" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="-3" doubleValue="-3" id="j5C-3G-veo"/>
+                                <connections>
+                                    <action selector="takeIntValueFrom:" target="jgY-UJ-fOb" id="CK9-u2-lAF"/>
+                                </connections>
+                            </stepper>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-UJ-fOb">
+                                <rect key="frame" x="462" y="560" width="96" height="18"/>
+                                <levelIndicatorCell key="cell" userInterfaceLayoutDirection="rightToLeft" alignment="left" doubleValue="1" minValue="-3" id="P1Q-ma-AZx" userLabel="conservitive"/>
+                            </levelIndicator>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-LZ-c1j">
+                                <rect key="frame" x="667" y="556" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="3" doubleValue="1" id="1ID-vI-NQj"/>
+                                <connections>
+                                    <action selector="takeIntValueFrom:" target="m0J-PM-sg3" id="GID-6p-QE3"/>
+                                </connections>
+                            </stepper>
+                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kir-vj-VZb">
+                                <rect key="frame" x="635" y="15" width="561" height="170"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="Reputation" identifier="0" id="8GG-sf-LNe">
+                                        <view key="view" ambiguous="YES" id="qpm-iT-t9q">
+                                            <rect key="frame" x="10" y="33" width="367" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4Mv-9P-OxW">
+                                                    <rect key="frame" x="131" y="-128" width="404" height="125"/>
+                                                    <view key="contentView" id="tEe-EJ-EX9">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fx6-1m-yRP" userLabel="Rep Names">
+                                                    <rect key="frame" x="-5" y="-39" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Strong Willed" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="B2W-tg-ilq" id="V5j-MF-Fdd">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="77a-4D-ofW">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" id="xDL-KJ-hDp"/>
+                                                                <menuItem title="Charismatic" id="VZu-Sb-j2k"/>
+                                                                <menuItem title="Confident" id="nnr-Yf-WE6"/>
+                                                                <menuItem title="Favoured by Fortune" id="SHB-Vx-kLr"/>
+                                                                <menuItem title="Fearless" id="2CE-Mt-Tr0"/>
+                                                                <menuItem title="Gregarious" id="S6N-sR-XkF"/>
+                                                                <menuItem title="I Know a Guy..." id="VHG-un-kRg"/>
+                                                                <menuItem title="Icy Stare" id="g08-vr-EN2"/>
+                                                                <menuItem title="Intimidation Presence" id="rpM-hX-Hyy"/>
+                                                                <menuItem title="Magc Empathy" id="GMo-4q-Pco"/>
+                                                                <menuItem title="Notorious" id="FRZ-wI-Yvo"/>
+                                                                <menuItem title="Resourceful" id="FTq-wE-Aj3"/>
+                                                                <menuItem title="Shady" id="6ie-zN-qln"/>
+                                                                <menuItem title="Silver Tongue" id="Cpk-bN-C8D"/>
+                                                                <menuItem title="Strong Willed" state="on" id="B2W-tg-ilq"/>
+                                                                <menuItem title="University Education" id="ktB-X0-SML"/>
+                                                                <menuItem title="Voice of Reason" id="Lnb-ew-cWb"/>
+                                                                <menuItem title="Weatherbeaten" id="4Dd-Dc-j9Y"/>
+                                                                <menuItem title="Well-Traveled" id="SkU-iD-Njm"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Tactic" identifier="1" id="hCZ-pw-l9g">
+                                        <view key="view" id="ny1-gQ-ofa">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-W1-wen">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="aCq-0u-TsN">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-P5-MKJ" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="0Cp-rt-HOc">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="1ov-Hq-HH8">
+                                                            <items>
+                                                                <menuItem title="Catlike Reflexex" id="qUo-r4-DvZ"/>
+                                                                <menuItem title="Charge" id="sif-7x-fcS"/>
+                                                                <menuItem title="Combat Alertness" id="pdK-tb-Dad"/>
+                                                                <menuItem title="Coordinared Efforts" id="JWz-rv-A1S"/>
+                                                                <menuItem title="Exceptional Training" id="qR6-iY-jbA"/>
+                                                                <menuItem title="Flanking Manoeuvre" id="DXK-he-AqI"/>
+                                                                <menuItem title="Girding Oneself" id="ozv-hh-3XJ"/>
+                                                                <menuItem title="I'll Sleep When I'm Dead" id="ucm-IE-s10"/>
+                                                                <menuItem title="Lead by Example" id="00E-m9-KYx"/>
+                                                                <menuItem title="Lead from the Front" id="Lnk-h7-nmw"/>
+                                                                <menuItem title="Might Makes Right" id="233-f8-ax1"/>
+                                                                <menuItem title="Relentless Approach" id="D4j-Jp-v8v"/>
+                                                                <menuItem title="Relentless Pursuit" id="MlG-Wo-SI7"/>
+                                                                <menuItem title="Robust" id="8iO-ye-uaY"/>
+                                                                <menuItem title="Shield Wall" id="Iat-X9-ZLH"/>
+                                                                <menuItem title="Strenght in Numbers" id="flI-Xy-oE7"/>
+                                                                <menuItem title="Timely Surge" id="sE0-st-NbK"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Focus" identifier="2" id="Bel-Zy-0kA">
+                                        <view key="view" id="d7B-EL-nxY">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="wC5-ZS-Q6r">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="gNB-c1-nCm">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFE-hv-it6" userLabel="Focus Names">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="3c8-j9-OjG">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="4lv-8F-rAo">
+                                                            <items>
+                                                                <menuItem title="Aethyric Conduit" id="SDy-Kf-W9W"/>
+                                                                <menuItem title="Clear Minded" id="gfS-Nr-BFF"/>
+                                                                <menuItem title="Clever" id="X4j-jI-IUU"/>
+                                                                <menuItem title="Contemplative" id="3ge-wq-oJR"/>
+                                                                <menuItem title="Creative Thinking" id="xnM-iZ-n4y"/>
+                                                                <menuItem title="Deductive Reasoning" id="MQ3-Mz-9FB"/>
+                                                                <menuItem title="Determined" id="g5N-yZ-SlZ"/>
+                                                                <menuItem title="Foresight" id="hYI-qF-SI2"/>
+                                                                <menuItem title="I Seem to Recall..." id="Ydp-h0-rr3"/>
+                                                                <menuItem title="Instinctive" id="9Ty-Ga-gdW"/>
+                                                                <menuItem title="I've Seen Worse..." id="uSH-Ww-h0o"/>
+                                                                <menuItem title="Jack of All Trades" id="OPe-gN-dxq"/>
+                                                                <menuItem title="Keen Eyes" id="um1-0c-esI"/>
+                                                                <menuItem title="Quick Wits" id="Blh-29-jBM"/>
+                                                                <menuItem title="Resolute" id="PSH-kM-86a"/>
+                                                                <menuItem title="Shadow Stalker" id="bVs-Ni-NBZ"/>
+                                                                <menuItem title="Skygazer" id="ohT-cb-Meg"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Faith" identifier="2" id="gdr-nd-igl">
+                                        <view key="view" id="PiQ-hY-CeL">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="CKC-cB-YzM">
+                                                    <rect key="frame" x="131" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="VVm-n1-91G">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zq-kD-21B" userLabel="Faith">
+                                                    <rect key="frame" x="-5" y="85" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="cFd-DA-A1t">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="kDF-x7-88s">
+                                                            <items>
+                                                                <menuItem title="Morr, God of Dreams &amp; Death" id="d10-qG-VsA"/>
+                                                                <menuItem title="Shallya, Goddess of Healing &amp; Mercy" id="2Bj-vQ-p82"/>
+                                                                <menuItem title="Sigmar, God of the Empire" id="3ov-fo-Xi1"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Order" identifier="2" id="PYA-Ma-5Tn">
+                                        <view key="view" id="fgt-dp-1hZ">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7p-3H-kV3" userLabel="Order Names">
+                                                    <rect key="frame" x="-5" y="84" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Better Luck Then Good" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dGK-Ro-w3A" id="MHK-Xq-pig">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="bMK-zD-YhQ">
+                                                            <items>
+                                                                <menuItem title="Better Luck Then Good" state="on" id="dGK-Ro-w3A"/>
+                                                                <menuItem title="Charismatic" id="N2l-ZD-vb7"/>
+                                                                <menuItem title="Confident" id="Axq-8U-ZQI"/>
+                                                                <menuItem title="Favoured by Fortune" id="BYy-uc-Ra7"/>
+                                                                <menuItem title="Fearless" id="CGM-Xj-MfM"/>
+                                                                <menuItem title="Gregarious" id="ECH-Fm-4GO"/>
+                                                                <menuItem title="I Know a Guy..." id="5oQ-9e-zm6"/>
+                                                                <menuItem title="Icy Stare" id="1PC-60-aR1"/>
+                                                                <menuItem title="Intimidation Presence" id="HOx-TU-4fz"/>
+                                                                <menuItem title="Magc Empathy" id="c9C-rB-cM4"/>
+                                                                <menuItem title="Notorious" id="nfJ-qB-Otw"/>
+                                                                <menuItem title="Resourceful" id="emY-at-BH5"/>
+                                                                <menuItem title="Shady" id="UiQ-B2-guP"/>
+                                                                <menuItem title="Silver Tongue" id="8aK-zr-UML"/>
+                                                                <menuItem title="Strong Willrf" id="HmP-Ju-WPz"/>
+                                                                <menuItem title="University Education" id="Y8P-g1-pLT"/>
+                                                                <menuItem title="Voice of Reason" id="Y8d-Eq-a9Z"/>
+                                                                <menuItem title="Weatherbeaten" id="Kug-N8-pL9"/>
+                                                                <menuItem title="Well-Traveled" id="sSv-EA-HuJ"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="faD-hj-fOs">
+                                                    <rect key="frame" x="131" y="-6" width="404" height="125"/>
+                                                    <view key="contentView" id="CVg-Ml-Vjq">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Witchcraft" identifier="2" id="dLK-1s-Fyp">
+                                        <view key="view" id="ouH-h0-MVa">
+                                            <rect key="frame" x="10" y="33" width="541" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2w-8E-to0" userLabel="Order Names">
+                                                    <rect key="frame" x="1" y="86" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Hedge Magic" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="PSd-5F-lsz" id="zPz-i4-r55">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="5HB-75-4Ig">
+                                                            <items>
+                                                                <menuItem title="Hedge Magic" state="on" id="PSd-5F-lsz"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-6d-58y">
+                                                    <rect key="frame" x="137" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="lsZ-WW-XUk">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-Nf-7Fc">
+                                <rect key="frame" x="73" y="431" width="44" height="34"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="0A7-7C-WaW">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="strStat:" target="5gI-5U-AMq" id="BGY-fx-aFh"/>
+                                </connections>
+                            </textField>
                             <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-Iv-R5G">
                                 <rect key="frame" x="635" y="356" width="561" height="170"/>
                                 <font key="font" metaFont="system"/>
@@ -1547,144 +2167,40 @@
                                         <view key="view" id="kZb-HV-hdp">
                                             <rect key="frame" x="10" y="33" width="541" height="124"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljf-o0-U7A" userLabel="Order Names">
+                                                    <rect key="frame" x="1" y="86" width="134" height="26"/>
+                                                    <popUpButtonCell key="cell" type="push" title="Hedge Magic" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Q2p-Ws-sQY" id="Em8-5h-QYV">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="menu"/>
+                                                        <menu key="menu" id="ksg-GP-2Wx">
+                                                            <items>
+                                                                <menuItem title="Hedge Magic" state="on" id="Q2p-Ws-sQY"/>
+                                                            </items>
+                                                        </menu>
+                                                    </popUpButtonCell>
+                                                </popUpButton>
+                                                <box fixedFrame="YES" title="info" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="grD-NU-W9p">
+                                                    <rect key="frame" x="137" y="-4" width="404" height="125"/>
+                                                    <view key="contentView" id="ugU-2Q-jr5">
+                                                        <rect key="frame" x="1" y="1" width="402" height="109"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </box>
+                                            </subviews>
                                         </view>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-kp-1BG">
-                                <rect key="frame" x="123" y="440" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="INZ-hx-jfV"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="ORN-Sp-E7J" id="WHb-uC-b20"/>
-                                </connections>
-                            </stepper>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-PM-y1u">
-                                <rect key="frame" x="123" y="368" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="CZ0-hq-myr"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="nR0-RQ-s85" id="vBy-B7-rOb"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-e9-2cw">
-                                <rect key="frame" x="72" y="366" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nR0-RQ-s85">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="hq5-Ep-Aew"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i09-Bo-HTe">
-                                <rect key="frame" x="123" y="299" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="H1W-hR-Xgi"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="geS-Ha-6ju" id="agY-po-aXK"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efy-E0-XyU">
-                                <rect key="frame" x="72" y="297" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="geS-Ha-6ju">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="WtV-Pg-tXt"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-dx-95b">
-                                <rect key="frame" x="123" y="215" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="Ayo-nz-VRe"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="Fd8-1W-Mkr" id="YSR-8V-2O9"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-dj-em2">
-                                <rect key="frame" x="72" y="213" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fd8-1W-Mkr">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="vYR-LX-xe1"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-Qh-69U">
-                                <rect key="frame" x="123" y="132" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="61E-9W-vfL"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="eQH-W7-tNX" id="g7n-zy-ma6"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-eB-ZB2">
-                                <rect key="frame" x="72" y="130" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eQH-W7-tNX">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Rt9-ey-pMI"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i07-Dm-QjD">
-                                <rect key="frame" x="123" y="51" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="2" maxValue="5" doubleValue="2" id="aX3-hh-gfl"/>
-                                <connections>
-                                    <action selector="takeIntegerValueFrom:" target="gr9-EH-Lnc" id="jdV-d9-eO3"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tX-d8-yJ6">
-                                <rect key="frame" x="72" y="49" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gr9-EH-Lnc">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="7WC-eL-XTM"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-V6-raK">
-                                <rect key="frame" x="42" y="90" width="123" height="24"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fellowship" id="ZHo-uf-Wuj">
-                                    <font key="font" metaFont="system" size="20"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0J-PM-sg3">
-                                <rect key="frame" x="566" y="560" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" alignment="left" doubleValue="3" maxValue="3" criticalValue="1" id="iRk-66-h7x" userLabel="reckless"/>
-                            </levelIndicator>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-LZ-c1j">
-                                <rect key="frame" x="667" y="556" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="3" doubleValue="1" id="1ID-vI-NQj"/>
-                                <connections>
-                                    <action selector="takeIntValueFrom:" target="m0J-PM-sg3" id="GID-6p-QE3"/>
-                                </connections>
-                            </stepper>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-Ef-byL">
-                                <rect key="frame" x="438" y="556" width="19" height="27"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="-3" maxValue="-1" doubleValue="-1" id="j5C-3G-veo"/>
-                                <connections>
-                                    <action selector="takeIntValueFrom:" target="jgY-UJ-fOb" id="CK9-u2-lAF"/>
-                                </connections>
-                            </stepper>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-vz-hd6">
-                                <rect key="frame" x="72" y="438" width="46" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ORN-Sp-E7J">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Jy4-5v-hyc"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <action selector="strenght:" target="5gI-5U-AMq" id="qo4-h5-w3W"/>
-                                </connections>
-                            </textField>
-                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-UJ-fOb">
-                                <rect key="frame" x="462" y="560" width="96" height="18"/>
-                                <levelIndicatorCell key="cell" userInterfaceLayoutDirection="rightToLeft" alignment="left" doubleValue="1" minValue="-3" id="P1Q-ma-AZx" userLabel="conservitive"/>
-                            </levelIndicator>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="careerMenu" destination="PbE-Ss-bQQ" id="Zvn-Yk-a0E"/>
                         <outlet property="raceMenu" destination="idw-mS-wSb" id="aTi-Pk-xLa"/>
+                        <outlet property="strStat" destination="Kbw-Nf-7Fc" id="QTq-Vg-taP"/>
+                        <outlet property="strUpdate" destination="Kbw-Nf-7Fc" id="Lys-7p-Cfv"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

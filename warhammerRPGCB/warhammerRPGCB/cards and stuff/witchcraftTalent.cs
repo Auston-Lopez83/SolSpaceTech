@@ -21,7 +21,7 @@ namespace warhammerRPGCB
 		{
 			witchcraftTalent hedgeMagic = new witchcraftTalent();
 			hedgeMagic.cardName = "Hedge Magic";
-			hedgeMagic.cardText = "When you cast a spell, you may suffer 1 corruption to ad one expertise die";
+			hedgeMagic.cardText = "When you cast a spell, you may suffer 1 corruption to add one expertise die";
 
 		}
 	}
