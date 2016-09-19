@@ -10,7 +10,7 @@
 //
 //
 using System;
-namespace warhammerRPGCB
+namespace warhammerTalents
 {
 	public class focusTalent
 	{

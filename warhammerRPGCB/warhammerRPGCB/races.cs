@@ -25,9 +25,26 @@ namespace warhammerRPGCB
 		int will;
 		int fell;
 
+		//public static object human { get; internal set; }
+
+		internal static object human;
+		internal static object dwarf;
 
 
 
+		/*
+
+		public static Human ()
+			{
+				raceName = "Human";
+				str = 2;
+				tou = 2;
+				agi = 2;
+				inte = 2;
+				will = 2;
+				fell = 2;
+			}
+			*/
 
 
 		public races() 

@@ -18,16 +18,30 @@ namespace warhammerRPGCB
 {
 	public partial class ViewController : NSViewController
 	{
-		p
+		string raceChoice;
+		public void SomeJob()
+		{
+			//races human = new races();
 
+			raceChoice = races.human.raceName;
+		}
 
 
 
 
 		public ViewController(IntPtr handle) : base(handle)
 		{
+			
+
 		}
 
+		 
+
+
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+		}
 
 		public override NSObject RepresentedObject
 		{

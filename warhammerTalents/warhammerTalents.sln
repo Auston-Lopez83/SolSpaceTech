@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "warhammerTalents", "warhammerTalents\warhammerTalents.csproj", "{AC086935-9B98-4214-8103-0BBDF21C34FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7CEE2F4-D9DD-4309-AC30-29ED7F484E1D}"
+	ProjectSection(SolutionItems) = preProject
+		focusTalent.cs = focusTalent.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Release|iPhone.ActiveCfg = Release|iPhone
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Release|iPhone.Build.0 = Release|iPhone
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{AC086935-9B98-4214-8103-0BBDF21C34FE}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

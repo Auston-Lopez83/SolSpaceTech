@@ -84,13 +84,13 @@
     <Compile Include="cards and stuff\focusTalent.cs" />
     <Compile Include="cards and stuff\reputationTalent.cs" />
     <Compile Include="cards and stuff\testing.cs" />
-    <Compile Include="cards and stuff\races.cs" />
     <Compile Include="cards and stuff\classes.cs" />
     <Compile Include="cards and stuff\gear.cs" />
     <Compile Include="cards and stuff\tacticTalent.cs" />
     <Compile Include="cards and stuff\witchcraftTalent.cs" />
     <Compile Include="cards and stuff\orderTalent.cs" />
     <Compile Include="cards and stuff\faithTalent.cs" />
+    <Compile Include="races.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
