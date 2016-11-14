@@ -15,15 +15,15 @@ namespace warhammerRPGCB
 	public class focusTalent
 	{
 		
-		string cardName;
-		string cardText;
-		int fortuneDice;
-		int missfortuneDice;
-		int conservativeDice;
-		int recklessDice;
-		int challengeDice;
-		int characteristicDice;
-		int expertiseDice;
+		public string cardName;
+		public string cardText;
+		public int fortuneDice;
+		public int missfortuneDice;
+		public int conservativeDice;
+		public int recklessDice;
+		public int challengeDice;
+		public int characteristicDice;
+		public int expertiseDice;
 
 
 		public focusTalent()

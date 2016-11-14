@@ -1,0 +1,82 @@
+&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;meta name="viewport" content="width=device-width">
+        &lt;title>Resume&lt;/title>
+        &lt;link rel="stylesheet" href="/css/bootstrap.css">
+        &lt;script src="/js/bootstrap.js">&lt;/script>
+        &lt;script src="/js/jquery-3.1.1.js">&lt;/script>
+        &lt;link rel="stylesheet" href="/css/Main.css">
+        &lt;style>
+            li {
+                font-size: 20px;
+            }
+            .vertLine {
+                border-left: solid thick #a2a2a2;
+            }
+            .horzLine {
+                border-top:  solid thick #a2a2a2;
+            }
+        &lt;/style>
+    &lt;/head>
+    &lt;body>
+        &lt;div style="padding-top:50px;">&lt;/div>
+        &lt;h2 class="horzLine" style=" padding-left:25px;padding-bottom:100px;padding-top:30px">Auston Lopez&lt;/h2>
+        &lt;div class="row">
+          &lt;div class="col-sm-2" alt="Left sidebar" style="color: #4343d4; padding-left:25px">
+              &lt;h4>(734)635-5921 &lt;br>
+                  mrpowerz83@me.com
+                    &lt;br>&lt;br>&lt;br>
+                  6550 N. Ashland Ave.&lt;br>
+                  Apt: BSMT&lt;br>
+                  Chicago,IL 60626
+              &lt;/h4>
+             
+
+            &lt;/div>
+          &lt;div class="col-sm-8">
+            &lt;div class="vertLine" >
+                &lt;div style="padding-left:20px">
+
+                    &lt;h4 style="color:#4545d4">Profile&lt;/h4>
+                    &lt;h4 style="color:#4545d4">Experience&lt;/h4>
+                    &lt;h4>Intern, MVC Wizards; Chicago,IL — 10/1/2016 - Now&lt;/h4>
+                    &lt;ul>
+                        &lt;li>&lt;/li>
+                    &lt;/ul>
+                    &lt;h4>Host, Sparrow; Chicago,IL — 5/5/2016 - Now&lt;/h4>
+                    &lt;ul>
+                        &lt;li>&lt;/li>
+                    &lt;/ul>
+                    &lt;h4>Head Server, Tower Inn; Ypsilanti,Mi — 2011 - 4/27/2016&lt;/h4>
+                    &lt;ul>
+                        &lt;li>Investigate and resolve complaints regarding food quality, service , or accommodations.&lt;/li>
+                        &lt;li>Monitor food preparations methods, portion sizes, garnish and presentation of food to ensure food is prepared and presented in an acceptable manner.&lt;/li>
+                        &lt;li>Schedule, receiver food and beverage deliveries, check delivery contents to verify product quality and quantity.&lt;/li>
+                        &lt;li>Perform some food peroration or food service tasks such as; cleaning tables, and serving food and drinks as necessary.&lt;/li>
+                        &lt;li>Greet guest, escort them to their seats, and present them with menus.&lt;/li>
+                        &lt;li>Schedule the use of facilities or catering services for and advent such as banquets or receptions, and negotiate details of arrangements with the clients.&lt;/li>
+                        &lt;li>Explain how various menu items are prepared, describing ingredients and cooking methods.&lt;/li>
+                        &lt;li>Provide guest with information about local areas, including giving directions.&lt;/li>
+                        &lt;li>Training new employees&lt;/li>
+                    &lt;/ul>
+                    &lt;h4>Host, Red Hawk Bar and Grill; Ann Arbor, MI — 2006 - 2011&lt;/h4>
+                    &lt;ul>
+                        &lt;li>Taking phone calls, leaving notes, and answering food related questions.&lt;/li>
+                        &lt;li>Understanding the local events to ensure proper usage of table space in a small 60 person restaurant.&lt;/li>
+                    &lt;/ul>
+                    &lt;h4>Manager, Subway; Ann Arbor, Mi — 2003 - 2004&lt;/h4>
+                    &lt;ul>
+                        &lt;li>Responsible for opening the store.&lt;/li>
+                        &lt;li>Counting the cash drawer and ensuring the correct amount of change as to not run out of bills when it was busy.&lt;/li>
+                        &lt;li>Ordering and count of both dry storage and fresh food.&lt;/li>
+                    &lt;/ul>
+
+                &lt;/div>
+            &lt;/div>
+            &lt;/div>
+          &lt;div class="col-sm-2">Right sidebar&lt;/div>
+        &lt;/div>
+
+    &lt;/body>
+&lt;/html>

@@ -20,6 +20,7 @@ namespace warhammerRPGCB
 		{
 			NSApplication.Init();
 			NSApplication.Main(args);
+			//Console.WriteLine(focusTalent);
 
 
 
