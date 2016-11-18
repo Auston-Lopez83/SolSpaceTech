@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcLearning", "MvcLearning\MvcLearning.csproj", "{573F0EB8-D724-40ED-89D1-39825DDA9BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcLearning.Tests", "MvcLearning.Tests\MvcLearning.Tests.csproj", "{CC5097D1-A0A6-406D-A831-B3BBCC190F34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{573F0EB8-D724-40ED-89D1-39825DDA9BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573F0EB8-D724-40ED-89D1-39825DDA9BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573F0EB8-D724-40ED-89D1-39825DDA9BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573F0EB8-D724-40ED-89D1-39825DDA9BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5097D1-A0A6-406D-A831-B3BBCC190F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5097D1-A0A6-406D-A831-B3BBCC190F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5097D1-A0A6-406D-A831-B3BBCC190F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5097D1-A0A6-406D-A831-B3BBCC190F34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
