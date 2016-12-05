@@ -23,7 +23,7 @@ namespace Rose_Game
 
 		public static void Main(string[] args)
 		{
-			//testing
+			//testing this
 			string[,] board = new string[4, 4];
 
 
