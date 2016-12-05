@@ -21,111 +21,101 @@ namespace Rose_Game
 		{
 		}
 
-		public static void Pos1(string Slot1, string Slot2, string[,] board,int x, int y)
+		public static void Pos1(string Slot1, string Slot2, string[,] board, int x, int y)
 		{
 			int ans = 0;
+			//Console.WriteLine("Slot1 is {0}",Slot1);
+			//Console.WriteLine("Slot2 is {0}",Slot2);
+				for (int c = 0; c < 16; c++)
+				{
 
-
-			/* not sure i want to add this now
-				int ans2 = 0;
-			*/
-
-			for (int b = 0; b < 4; b++)
-			{
-				if (y+b<4 && board[x, y + b] == Slot1)
+					x = x + 1;
+					if (x > 3)
 					{
-						ans = 1;
-						y = y + b;
-						break;
+						x = 0;
 					}
-
-
-
-					else if (y + b < 4 && x + 1 < 4 && board[x + 1, y + b] == Slot1)
+					for (int b = 0; b < 4; b++)
 					{
-						ans = 1;
-						y = y + b;
-						x = x + 1;
-						break;						
+						y = 1 + y;
+
+						if (y > 3)
+						{
+							y = 0;
+						}
+
+						if (board[x, y] == Slot1)
+						{
+							ans = 1;
+							Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
+							switch (ans)
+							{
+								case 1:
+									//Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
+									Pos2(board, Slot1, Slot2, x, y);
+									break;
+								default:
+									break;
+							}
+							return;
+						}
+					else if (x == 3 && y == 3)
+					{
+						return;
 					}
-					
-					else if (y + b < 4 && x + 2 < 4 && board[x + 2, y + b] == Slot1)
-					{
-						ans = 1;
-						y = y + b;
-						x = x + 2;
-						break;
-					}
-					else if ( y + b < 4 && x + 3 < 4 &&board[x + 3, y + b] == Slot1)
-					{
-						ans = 1;
-						y = y + b;
-						x = x + 3;
-						break;
 					}
 				}
 
-
-			switch (ans)
-			{
-				case 1:
-
-					Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
-					Pos2(board,Slot1, Slot2, x, y);
-					break;
-				default:
-					Console.WriteLine("Card did not Score");
-					break;
-			}
-
-
-
-
+			Console.WriteLine("No card Scored");
 
 		}
 
-		public static void Pos2(string[,] board, string Slot2,string Slot1, int x, int y)
+
+
+		public static void Pos2(string[,] board, string Slot1,string Slot2, int x, int y)
 		{
 			int ans = 0;
+			//Console.WriteLine(board[2,2]);
+			//Console.WriteLine("Slot2 is {0}",Slot2);
 
-				if (y < 4 && board[x, y + 1] == Slot2)
+
+				if (y + 1 < 4 && board[x, y + 1] == Slot2)
 				{
-					ans = 1;
+					ans = 2;
 					y = y + 1;
-
 				}
 
-				else if (y < 0 && board[x, y - 1] == Slot2)
+				else if (y - 1 > 0 && board[x, y - 1] == Slot2)
 				{
-					ans = 1;
+					ans = 2;
 					y = y - 1;
 				}
 
-				else if (x < 4 && board[x + 1, y] == Slot2)
+				else if (x + 1 < 4 && board[x + 1, y] == Slot2)
 				{
-					ans = 1;
+					ans = 2;
 					x = x + 1;
 				}
-					
-				else if (x > 0 && board[x - 1, y] == Slot2)
+
+				else if (x - 1 > 0 && board[x - 1, y] == Slot2)
 				{
-					ans = 1;
-				x = x - 1;
+					ans = 2;
+					x = x - 1;
 				}
 				else 
 				{
-				ans = 3;
+					ans = 4;
+				    //x = x + 1;
 				}
-					
-
-
-
-			switch (ans)
+				switch (ans)
 				{
-					case 1:
-
+					case 2:
 						Console.WriteLine(" Slot2 {0} = ({1},{2})", Slot2, x, y);
+						Console.WriteLine("The card scored");
+						return;
+					case 3:
+						Console.WriteLine("The card  did not scored");
 						break;
+						
 					default:
 						Pos1(Slot1,Slot2,board,x,y);
 						break;
