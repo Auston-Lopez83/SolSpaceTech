@@ -27,22 +27,22 @@ namespace Rose_Game
 			string[,] board = new string[4, 4];
 
 
-			board[0, 0] = "Y";
+			board[0, 0] = "W";
 			board[0, 1] = "W";
 			board[0, 2] = "W";
 			board[0, 3] = "R";
 			board[1, 0] = null;
 			board[1, 1] = "W";
-			board[1, 2] = "Y";
+			board[1, 2] = "W";
 			board[1, 3] = "W";
 			board[2, 0] = "W";
 			board[2, 1] = "W";
 			board[2, 2] = "W";
-			board[2, 3] = "Y";
+			board[2, 3] = "W";
 			board[3, 0] = "W";
 			board[3, 1] = "P";
-			board[3, 2] = "P";
-			board[3, 3] = "Y";
+			board[3, 2] = "R";
+			board[3, 3] = "R";
 
 			string Slot1 = "Y";
 			string Slot2 = "R";
@@ -50,9 +50,10 @@ namespace Rose_Game
 			//end of testing
 			int x = -1;
 			int y = -1;
+			int z = 0;
 
 
-			Positions.Pos1(Slot1,Slot2,board,x,y);
+			Positions.Pos1(Slot1,Slot2,board,x,y,z);
 
 		}
 	}

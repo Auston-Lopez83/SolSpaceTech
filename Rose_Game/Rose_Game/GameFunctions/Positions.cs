@@ -21,47 +21,48 @@ namespace Rose_Game
 		{
 		}
 
-		public static void Pos1(string Slot1, string Slot2, string[,] board, int x, int y)
+		public static void Pos1(string Slot1, string Slot2, string[,] board, int x, int y,int z)
 		{
 			int ans = 0;
+
 			//Console.WriteLine("Slot1 is {0}",Slot1);
 			//Console.WriteLine("Slot2 is {0}",Slot2);
+			if (z < 17 )
+			{
 				for (int c = 0; c < 16; c++)
 				{
-
-					x = x + 1;
-					if (x > 3)
-					{
-						x = 0;
-					}
-					for (int b = 0; b < 4; b++)
-					{
-						y = 1 + y;
-
-						if (y > 3)
+						z = z + 1;
+						x = x + 1;
+						if (x > 3)
 						{
-							y = 0;
+							x = 0;
 						}
-
-						if (board[x, y] == Slot1)
+						for (int b = 0; b < 4; b++)
 						{
-							ans = 1;
-							Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
-							switch (ans)
+						
+							y = 1 + y;
+
+							if (y > 3)
 							{
-								case 1:
-									//Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
-									Pos2(board, Slot1, Slot2, x, y);
-									break;
-								default:
-									break;
+								y = 0;
 							}
-							return;
+
+							if (board[x, y] == Slot1)
+							{
+								ans = 1;
+								Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
+								switch (ans)
+								{
+									case 1:
+										//Console.WriteLine("Slot1 {0} = ({1},{2})", Slot1, x, y);
+									Pos2(board, Slot1, Slot2, x, y, z);
+										break;
+									default:
+										break;
+								}
+								return;
+							}
 						}
-					else if (x == 3 && y == 3)
-					{
-						return;
-					}
 					}
 				}
 
@@ -71,7 +72,7 @@ namespace Rose_Game
 
 
 
-		public static void Pos2(string[,] board, string Slot1,string Slot2, int x, int y)
+		public static void Pos2(string[,] board, string Slot1,string Slot2, int x, int y, int z)
 		{
 			int ans = 0;
 			//Console.WriteLine(board[2,2]);
@@ -117,7 +118,7 @@ namespace Rose_Game
 						break;
 						
 					default:
-						Pos1(Slot1,Slot2,board,x,y);
+						Pos1(Slot1,Slot2,board,x,y,z);
 						break;
 				}
 
