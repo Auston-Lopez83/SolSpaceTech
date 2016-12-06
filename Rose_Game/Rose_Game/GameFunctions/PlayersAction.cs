@@ -20,18 +20,12 @@ namespace Rose_Game
 		{
 			
 		}
-		public static void DrawCard()
+		public static void DrawCard(string Cards, int PlayerCards)
 		{
-			List<string> Cards = new List<string>();
-			for (int x = 1; x < 31; x++)
-			{
-				Cards.Add("Card"+ x);
-
-			}
-			for (int x = 1; x < 31; x++)
-			{
-				Console.WriteLine(Cards);
-			}
+			var rnd = new Random(DateTime.Now.Millisecond);
+			int x = rnd.Next(0, 29);
+			Cards.Clone();
+			Cards.Remove(x);
 
 			Console.WriteLine("You took a card");
 		}

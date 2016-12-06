@@ -24,6 +24,12 @@ namespace Rose_Game
 
 		public static void Main(string[] args)
 		{
+			var Cards = new List<string>();
+			for (int X = 1; X < 31; X++)
+			{
+				Cards.Add("Card" + X);
+			}
+			var PlayerCards = new List<string>();
 			//testing this
 			string[,] board = new string[4, 4];
 
@@ -48,7 +54,7 @@ namespace Rose_Game
 
 			string Slot1 = "Y";
 			string Slot2 = "R";
-			int action = 3;
+			int action = 1;
 
 			//end of testing
 			int x = -1;
@@ -61,7 +67,7 @@ namespace Rose_Game
 			switch (action)
 			{
 				case 1:
-					PlayersAction.DrawCard();
+					PlayersAction.DrawCard(Cards,PlayerCards);
 					break;
 				case 2:
 					PlayersAction.PlaceTile();
