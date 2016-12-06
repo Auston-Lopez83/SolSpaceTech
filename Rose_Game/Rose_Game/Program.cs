@@ -14,6 +14,7 @@ using System.Security.Cryptography.X509Certificates;
 using Rose_Game;
 using System.Runtime.CompilerServices;
 using System.Net;
+using System.Collections.Generic;
 
 namespace Rose_Game
 {
@@ -44,8 +45,10 @@ namespace Rose_Game
 			board[3, 2] = "R";
 			board[3, 3] = "R";
 
+
 			string Slot1 = "Y";
 			string Slot2 = "R";
+			int action = 3;
 
 			//end of testing
 			int x = -1;
@@ -53,7 +56,23 @@ namespace Rose_Game
 			int z = 0;
 
 
-			Positions.Pos1(Slot1,Slot2,board,x,y,z);
+
+			//player taks an action
+			switch (action)
+			{
+				case 1:
+					PlayersAction.DrawCard();
+					break;
+				case 2:
+					PlayersAction.PlaceTile();
+					break;
+				case 3:
+					PlayersAction.ScoreCard();
+					Positions.Pos1(Slot1, Slot2, board, x, y, z);
+					break;
+				default:
+					break;
+			}
 
 		}
 	}
