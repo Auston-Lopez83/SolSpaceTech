@@ -2,15 +2,16 @@
 using System.Collections;
 using System;
 using UnityEngine.EventSystems;
+namespace TheRoses
 
-public class BoardPos : MonoBehaviour
 {
-	public Transform flower;
-	public void colorFlower()
+	public class BoardPos : MonoBehaviour
 	{
-		flower = transform.GetChild.name;
-	}
+		public void colorFlower (string color,string[,] board)
+		{
+			board[0,0] = color;
+		}
 	
+	}
 }
-
 

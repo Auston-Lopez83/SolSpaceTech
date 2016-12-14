@@ -1,32 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
-
-public class Slots : MonoBehaviour, IDropHandler
+using System;
+namespace TheRoses
 {
-
-	public GameObject item
+	public class Slots : MonoBehaviour, IDropHandler
 	{
-		get
+
+		public GameObject item
 		{
-			if(transform.childCount>0)	
+			get
 			{
-				return transform.GetChild (0).gameObject;
+				if(transform.childCount>0)	
+				{
+					return transform.GetChild (0).gameObject;
+				}
+				return null;
 			}
-			return null;
+			
 		}
-		
-	}
 
-	#region IDropHandler implementation
+		#region IDropHandler implementation
 
-	public void OnDrop (PointerEventData eventData)
-	{
-		if(!item)
+		public void OnDrop (PointerEventData eventData)
 		{
-			DragMe.itemBeingDragged.transform.SetParent (transform);
+			if(!item)
+			{
+				DragMe.itemBeingDragged.transform.SetParent (transform);
+			}
 		}
-	}
 
-	#endregion
+		#endregion
+	}
 }
